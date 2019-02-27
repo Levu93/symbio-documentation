@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installation Manual </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installation Manual ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="installation-manual">Installation Manual</h1>
+
+<p>The manual installation describes each installation step in detail. Please use this instruction if the script installation had no successful result or if you cannot run PowerShell scripts.</p>
+<h2 id="iis-installation">IIS Installation</h2>
+<p>Enable the Web Server (IIS) role and establish role services.</p>
+<ul>
+<li>Windows Server</li>
+</ul>
+<h3 id="windows-desktop-operating-systems">Windows desktop operating systems</h3>
+<p>Navigate to <strong>Control Panel</strong> &gt; <strong>Programs</strong> &gt; <strong>Programs and Features</strong> &gt; <strong>Turn Windows features on or off</strong> (left side of the screen). Open the group for <strong>Internet Information Services</strong> and <strong>Web Management Tools</strong>. Check the box for <strong>IIS Management Console</strong>. Check the box for <strong>World Wide Web Services</strong>. Accept the default features for <strong>World Wide Web Services</strong> or customize the IIS features to suit your needs.</p>
+<p><img src="media/iis-windows-features.png" alt="Iis Windows Features"></p>
+<h3 id="windows-server-operating-systems">Windows Server operating systems</h3>
+<p>For server operating systems, use the <strong>Add Roles and Features</strong> wizard via the <strong>Manage</strong> menu or the link in <strong>Server Manager</strong>. On the <strong>Server Roles</strong> step, check the box for <strong>Web Server (IIS)</strong>.</p>
+<p><img src="media/select-server-roles.png" alt="Select Server Roles"></p>
+<p>On the <strong>Role services</strong> step, select the IIS role services you desire or accept the default role services provided.</p>
+<p><img src="media/select-role-services.jpg" alt="Select Role Services"></p>
+<p>Proceed through the <strong>Confirmation</strong> step to install the web server role and services. A server/IIS restart is not required after installing the Web Server (IIS) role.</p>
+<hr>
+<h3 id="create-the-iis-website">Create the IIS Website</h3>
+<ol>
+<li>Start the Internet Information Server (IIS)</li>
+</ol>
+<h4 id="this-is-how-you-start-iis-manager-in-the-dialogue-field-quotexecutequot">This is how you start IIS-Manager in the dialogue field &quot;Execute&quot;</h4>
+<ol>
+<li>On the <strong>Start</strong> menu, click <strong>All Programs</strong> , click <strong>Accessories</strong> , and then click <strong>Run</strong>.</li>
+<li>In the <strong>Open</strong> box, type <strong>inetmgr</strong> and then click <strong>OK</strong></li>
+</ol>
+<h4 id="this-is-how-you-start-iis-manager-from-the-administrative-services-console">This is how you start IIS-Manager from the Administrative Services console</h4>
+<ol>
+<li>On the <strong>Start</strong> menu, click <strong>All Programs</strong> , click <strong>Accessories</strong> , and then click <strong>Run</strong>.</li>
+<li>In the <strong>Run</strong> text box, type <strong>control panel</strong> , and then click <strong>OK</strong>.</li>
+<li>In the <strong>Control Panel</strong> window, click <strong>Classic View</strong> , and then double-click <strong>Administrative Tools</strong>.</li>
+<li>In the <strong>Administrative Tools</strong> window, double-click <strong>Internet Information Services</strong>.</li>
+</ol>
+<h4 id="this-is-how-you-create-an-application-pool-on-a-web-server">This is how you create an application pool on a web server</h4>
+<ol>
+<li>In the <strong>Connections</strong> pane please expand the server name and click on  <strong>application pools</strong>.</li>
+<li>On the page  <strong>Application pools</strong>  please click on <strong>Add application pool</strong> in the <strong>Actions</strong></li>
+<li><p>In the dialogue field <strong>Add application pool</strong> please enter a unique name for the application pool in the field <strong>Name</strong>. Or right click on the area and select the option &#39;Add Application Pool...&#39;</p>
+<p> <img src="media/add-AppPool-window.png" alt="Add AppPool Window"></p>
+<p> A new dialog opens. Maintain the following values.</p>
+<ol>
+<li>In the List  <strong>.NET Framework-Version</strong>  please select the following .NET Framework version: NET CLR Version v4.0.x</li>
+<li>From the list <strong>Managed pipeline mode</strong> please select the <strong>Integrated</strong> , if you want to use the pipeline integrated in IIS und ASP.NET. Select <strong>No Managed Code</strong> if you install an Microservice for Symbio. ASP.NET Core runs in a separate process and manages the runtime.</li>
+</ol>
+</li>
+<li><p>Please select  <strong>Start application pool immediately</strong> to start the application pool whenever the www service is started. This option is activated by default.</p>
+</li>
+<li><p>Click on  <strong>OK</strong>.</p>
+<p> <img src="media/no-managed-code.png" alt="No Managed Code"> <img src="media/App_Pool.jpg" alt="Symbio Pool"></p>
+</li>
+</ol>
+<h4 id="this-is-how-you-add-a-website">This is how you add a website</h4>
+<ol>
+<li><p>In the <strong>Connections</strong>  pane please right-click the node <strong>Sites</strong>  in the tree and then click on <strong>Add</strong>** Web Site**. Or right click on the area and select the option &#39;Add Website&#39;.</p>
+<p><img src="media/add-website-window.png" alt="Add Website Window"></p>
+</li>
+<li><p>In the dialogue field  <strong>Add</strong>** Web Site** please enter a name for the website in the <strong>Website name</strong> box.</p>
+</li>
+<li>Click on  In the dialogue field  <strong>Select application pool</strong> please select the application pool which you have created in the previous section and then click on  <strong>OK</strong>.</li>
+<li>In the field  <strong>Physical path</strong>  please type the physical path of the Web site&#39;s folder, or click the browse button ( <strong>...</strong> ) to navigate the file system to find the folder.</li>
+<li>If the physical path that you entered is to a remote share, click <strong>Connect as</strong> to specify credentials that have permission to access the path. If you do not use specific credentials, select the <strong>Application user (pass-through authentication)</strong> option in the <strong>Connect As</strong> dialog box.</li>
+<li>Select the protocol for the Web site from the <strong>Type</strong> list.</li>
+<li>The default value in the <strong>IP address</strong> box is <strong>All Unassigned</strong>. If you must specify a static IP address for the Web site, type the IP address in the <strong>IP address</strong> box.</li>
+<li>Type a port number in the <strong>Port</strong> text box.</li>
+<li>Optionally, type a host header name for the Web site in the <strong>Host Header</strong> box.</li>
+<li>If you do not have to make any changes to the site, and you want the Web site to be immediately available, select the <strong>Start Web site immediately</strong> check box.</li>
+<li><p>Click  <strong>OK</strong>.</p>
+<p><img src="media/configure-website.png" alt="Configure Website"></p>
+</li>
+</ol>
+<h4 id="recommendation">Recommendation</h4>
+<p>Create for each environment (Test and Prod) a website.</p>
+<h2 id="basic-settings">Basic settings</h2>
+<p>Please unpack the Symbio Web installation package on the applications server.</p>
+<p><strong>Recommendation:</strong>
+It is recommended to provide two parallel installations:</p>
+<ul>
+<li>C:\Symbio\SymbioWebTest</li>
+<li>C:\Symbio\SymbioWebProd</li>
+</ul>
+<p><strong>Note:</strong>
+The database is created automatically at the start of the application.</p>
+<h2 id="settings-in-the-configuration-file-webconfig">Settings in the configuration file (Web.config)</h2>
+<h3 id="database-mode-pool-single-or-multi">Database mode: Pool, Single or Multi</h3>
+<p><strong>Notice:</strong>
+In addition to the database modes known so far, the pool mode has been added for version 1808. This mode will be activated by default. Please comment on the following lines shown on the Screenshot from the Web.config to deactivate this feature. For further Information about the databasemode pool please check the admin and operations manual.</p>
+<p><img src="media/WebConfig.jpg" alt="WebConfig"></p>
+<ul>
+<li><p>With the setting <strong>&amp;lt;add key=&quot;SYMBIO_WEB_DB_MODE&quot; value=&quot;Multiple&quot; /&amp;gt;</strong> an SQl database is created for each collection or storage created in Symbio.</p>
+</li>
+<li><p>With the setting <strong>&amp;lt;add key=&quot;SYMBIO_WEB_DB_MODE&quot; value=&quot;Single&quot; /&amp;gt;</strong> only one SQL database is created which contains all data.</p>
+</li>
+<li><p>With the setting <strong>&amp;lt;add key=&quot;SYMBIO_WEB_DB_MODE&quot; value=&quot;Pool&quot; /&amp;gt;</strong> For each pool, an SQL database is created that contains all the storages created and assigned in it, including data.</p>
+</li>
+</ul>
+<p>The standard setting is: „<strong>Pool</strong>&quot;</p>
+<p><strong>Configure database server:</strong></p>
+<ul>
+<li><p>With the setting <strong>SYMBIO_STORAGE_LOCATION</strong> and <strong>SYMBIO_STORAGE_SETTINGS</strong> you can configure the SQL Server and the SQL database which is to be used.</p>
+<p><img src="media/WebConfig_B.jpg" alt="WebConfig B"></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Server</strong></td>
+<td>srv-db\COMMON</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>SymbioWebDB</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong>
+For each installation (Test / Prod) a unique database name must be selected.</p>
+<h3 id="configure-initial-database-sizes-since-symbio-web-56">Configure initial database sizes (since Symbio Web 5.6)</h3>
+<p>If the Symbio database is configured for Multi-DB mode, then several settings can be configured to set the initial database file size (MDF) and the initial log file size (LDF):</p>
+<ul>
+<li>SqlServer.Multiple.Tenant.DataSize</li>
+<li>SqlServer.Multiple.Tenant.LogSize</li>
+</ul>
+<p>The AutoGrowth values for database and log files can be set in:</p>
+<ul>
+<li>SqlServer.Multiple.Tenant.DataFileGrowth</li>
+<li>SqlServer.Multiple.Tenant.LogFileGrowth</li>
+</ul>
+<p><strong>Notice:</strong>
+These values which can be configured here need to be equal or larger than the ModelDB settings otherwise databases cannot be created. <img src="media/WebConfig_C.jpg" alt="WebConfig C"></p>
+<h3 id="setting-for-update-interval-of-rendering-diagrams-since-symbio-56">Setting for update interval of rendering diagrams (since Symbio 5.6)</h3>
+<p>Since Symbio Web 5.6 diagrams are stored into the database so that opening of diagrams in Viewer mode is much faster. If the diagram is updated, e.g. because the executing role of an interface has been changed, then this change is only visible after a maximum of 30 seconds. This value can be configured in <strong>Symbio.BackgroundRenderingUpdateInterval</strong> and is currently set to 30 seconds.</p>
+<p><img src="media/WebConfig_D.jpg" alt="WebConfig D"></p>
+<p>If this setting does not exist, an internal value of 60 seconds will be used.</p>
+<h3 id="settings-for-freeampeasy-environments-since-symbio-58">Settings for Free&amp;Easy environments (since Symbio 5.8)</h3>
+<p>With Symbio Web 5.8 a Free&amp;Easy mode has been introduced which can restrict certain aspects of the release workflow. Besides a customized configuration the setting &#39;Symbio. RestrictReleaseWorkflowDatabaseNameRegex&#39; has to be activated. The value contains the regular expression that is used to match the current storage name and determine whether to activate the Free&amp;Easy mode.</p>
+<pre><code class="lang-xml">&lt;add key=&quot;Symbio.RestrictReleaseWorkflowDatabaseNameRegex&quot; value=&quot;^sandbox-&quot; /&gt;;
+</code></pre><h3 id="settings-for-server-error-pages-since-symbio-58">Settings for server error pages (since Symbio 5.8)</h3>
+<p>Since Symbio Web 5.8, in case of Web server errors only a single generic error page is displayed to hide private (server) data to users. For debugging purposes detailed error pages can be activated in the Web.config:</p>
+<pre><code class="lang-xml">&lt;customErrorsmode=&quot;Off&quot; defaultRedirect=&quot;~/Errors/error.html&quot;/&gt;
+</code></pre><h3 id="settings-for-encrypted-communication-via-https-since-symbio-58">Settings for encrypted communication via HTTPS (since Symbio 5.8)</h3>
+<p>Since Symbio Web 5.8, it&#39;s configurable in the Web.config whether all web server communications should be transmitted encrypted.</p>
+<p>To enable HTTPS, an SSL certificate is required and this setting needs to be activated:</p>
+<pre><code class="lang-xml">&lt;!-- &lt;httpCookies requireSSL=&quot;true&quot; /&gt;--&gt;
+</code></pre><h3 id="settings-for-symbio-web-security-since-symbio-59">Settings for Symbio Web security (since Symbio 5.9)</h3>
+<p>Since Symbio Web 5.9, the following 5.8 security settings have been enabled:</p>
+<pre><code class="lang-xml">&lt;httpProtocol&gt;
+ &lt;customHeaders&gt;
+    &lt;clear /&gt;
+    &lt;addname=&quot;Strict-Transport-Security&quot; value=&quot;max-age=16070400; includeSubDomains&quot; /&gt;
+    &lt;addname=&quot;X-XSS-Protection&quot; value=&quot;1; mode=block&quot; /&gt;
+    &lt;addname=&quot;X-Content-Type-Options&quot; value=&quot;nosniff&quot; /&gt;
+    &lt;addname=&quot;X-Frame-Options&quot; value=&quot;SAMEORIGIN&quot; /&gt;
+  &lt;/customHeaders&gt;;
+&lt;/httpProtocol&gt;;
+</code></pre><p><strong>Note:</strong>
+If images are not displayed in browser (e.g. IE 11) or external sites cannot be accessed by Symbio plug-ins, these security settings should be disabled for testing purposes. Please note that after modifying the Web.config the application pool restarts. Please validate settings in your test environment first.</p>
+<p>Now you can install the additional Microservices</p>
+<h2 id="installation-rendering-service-required-since-symbio-1807">Installation Rendering Service (required since Symbio 1807)</h2>
+<p>The installation of the Rendering service can be found <a href="../RenderingService/install-intro.md">here</a></p>
+<h2 id="installation-uniqueid-service-optional-service">Installation UniqueID Service (optional service)</h2>
+<p>The installation of the UniqueID service can be found <a href="../UniqueID/install-intro.md">here</a></p>
+<h2 id="installation-reporting-service-optional-service">Installation Reporting Service (optional service)</h2>
+<p>The installation of the Reporting service can be found <a href="../ReportingService/installation.md">here</a></p>
+<hr>
+<p>After you have created the IIS as <a href="IIS-Installation.html">described here</a> as well as the Symbio Application Pool and related website</p>
+<ol>
+<li>Open the advanced settings for the application pool</li>
+<li>Open the dialogue in the attribute <strong>Identity</strong></li>
+<li>Please select <strong>Custom account</strong> and click on <strong>Set</strong></li>
+<li>Enter a <strong>user</strong> with the following authorization:</li>
+</ol>
+<p>The user must be authorized for the DB Server and the DB</p>
+<ul>
+<li>The user must be part of the local group <strong>IIS_IUSRS</strong></li>
+<li><p>The user must be authorized for the application directory</p>
+<p><img src="media/App_Pool_Advanced.jpg" alt="App Pool Advanced"></p>
+</li>
+</ul>
+<p><strong>Note:</strong></p>
+<p>The configured user must have a user profile on the server. If such a profile does not exist, it can be created as follows:</p>
+<pre><code class="lang-cmd">RUNAS /env /user:**** [server] ****\SymbioWeb notepad.exe
+</code></pre><h2 id="server-settings">Server settings</h2>
+<h3 id="authorization-in-the-application-directory">Authorization in the application directory.</h3>
+<p>The configured user must have the following authorization:</p>
+<ol>
+<li>The user must have ( <strong>Read &amp; Execute</strong> , <strong>List folder contents</strong> , <strong>Read</strong> ) rights in the application directory</li>
+<li>The user must have ( <strong>Write</strong> , <strong>Modify</strong> ) rights in the sub directory &quot;<strong>log</strong>&quot;</li>
+</ol>
+<h3 id="enter-the-license-key-for-symbio-web">Enter the license key for Symbio Web</h3>
+<p>Please enter the license key you have received in the registry.</p>
+<p>Path: <strong>[HKEY_LOCAL_MACHINE\SOFTWARE\Ploetz + Zeller\SymbioSuite]</strong></p>
+<p>Create a new string by the name: <code>LicenseKey</code></p>
+<p>As value please enter the license key.</p>
+<p> <img src="media/Reg_Key.jpg" alt="Reg Key"></p>
+<p> Continue with the installation of the required and optional Symbio services <a href="./Requirements.html">Preparation</a>. For first steps see <a href="./Finishing.html">First Steps</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/installation-guide/installation/Installation-Manual.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

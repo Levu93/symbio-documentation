@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Web Jobs Scheduler </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Web Jobs Scheduler ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img class="logo" src="../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="web-jobs-scheduler">Web Jobs Scheduler</h1>
+
+<h2 id="installation">Installation</h2>
+<h3 id="system-requirements-wjms">System Requirements WJMS</h3>
+<ul>
+<li>OS-Version: Windows Server 2012 or comparable/ higher</li>
+<li>Dot Net Core Versions: 2.1.3 or comparable/ higher</li>
+<li>IIS-Version: 7.5 or comparable/ higher</li>
+<li>Processors: 4 or higher</li>
+<li>Memory: 4 or higher</li>
+</ul>
+<h3 id="required-software-wjms">Required Software WJMS</h3>
+<ul>
+<li>SQL-Server 2016 or higher</li>
+<li>IIS has to be installed, same preliminaries as Symbio</li>
+<li>.NET Core has to be installed (2.1.4 or later)</li>
+<li>.NET Core Windows Server Hosting (2.1.4 or later)</li>
+</ul>
+<h3 id="other-requirements-for-wjms">Other requirements for WJMS</h3>
+<ul>
+<li>The WJMS user set up in the IIS has to own appropriate rights</li>
+</ul>
+<h3 id="installation-1">Installation</h3>
+<ol>
+<li>download and install NET Core Windows Server Hosting (2.1.4 or later) <a href="https://www.microsoft.com/net/download/dotnet-core/2.1">here</a></li>
+<li>download artifact or ask support for package</li>
+<li>extract it to the installationfolder of the service</li>
+<li>create new site in IIS (bindings depending on server structure)</li>
+<li>Adjust AppPool Basic Settings: No Managed Code</li>
+<li>create database in SQL Server named after the service <img src="media/Database.png" alt="screenshot 1"></li>
+<li>create sql login with owner rights for created database</li>
+<li><p>adjust app settings.json by removing 3rd argument of serilog, remove Azure block and set AzureAD to false that it looks like this:</p>
+<pre><code>{
+  &quot;ConnectionStrings&quot;: {
+    &quot;DefaultConnection&quot;: &quot;&quot;
+  },
+  &quot;Serilog&quot;: {
+    &quot;Using&quot;: [ &quot;Serilog.Sinks.Console&quot;, &quot;Serilog.Sinks.Debug&quot;],
+    &quot;MinimumLevel&quot;: &quot;Debug&quot;,
+    &quot;WriteTo&quot;: [
+      { &quot;Name&quot;: &quot;Console&quot; },
+      { &quot;Name&quot;: &quot;Debug&quot; }
+    ],
+    &quot;Enrich&quot;: [ &quot;FromLogContext&quot;, &quot;WithMachineName&quot;, &quot;WithThreadId&quot; ],
+    &quot;Properties&quot;: {
+      &quot;Application&quot;: &quot;symbio-service-webjobs-test&quot;
+    }
+  },
+  &quot;MailSettings&quot;: {
+    &quot;UseDefaultCredentials&quot;: false,
+    &quot;Username&quot;: &quot;&quot;,
+    &quot;Password&quot;: &quot;&quot;,
+    &quot;EnableSsl&quot;: false,
+    &quot;MailFromAddress&quot;: &quot;noreply@symbioworld.com&quot;,
+    &quot;MailFromName&quot;: &quot;Symbio Web&quot;,
+    &quot;Host&quot;: &quot;smtp.sendgrid.net&quot;,
+    &quot;Port&quot;: 25,
+    &quot;DeliveryMethod&quot;: &quot;Network&quot;,
+    &quot;Timeout&quot;: 100000
+  },
+  &quot;AzureAd&quot;: {
+    &quot;Enabled&quot;: false,
+    &quot;Instance&quot;: &quot;&quot;,
+    &quot;Domain&quot;: &quot;&quot;,
+    &quot;TenantId&quot;: &quot;&quot;,
+    &quot;ClientId&quot;: &quot;&quot;,
+    &quot;CallbackPath&quot;: &quot;&quot;
+  },
+  &quot;DisableAuthorization&quot;: false
+}
+</code></pre></li>
+<li><p>set sql connectionstring to database in appsettings.json</p>
+</li>
+<li>TrustServerCertificate=True in connectionstring if there is self signed or no certificate</li>
+<li>call service with browser so that the tables will be ceated</li>
+<li>fill configstore table with Key &quot;token , username and password&quot; and the values <br> <img src="media/Values.png" alt="configtable values"></li>
+<li>restart site in IIS</li>
+<li>call servicelink/register and type in name and clear password to get hashed passwort. after that save the hash result in configstore table for passwort value</li>
+<li>in Symbio navigate to external systems on SysAdmin page</li>
+<li>create WebJobService by using user-defined value and URL plus authToken fro configstore table
+<img src="media/external-systems.png" alt="external systems"></li>
+<li>in each collection link all existing storages to that WebJob service<br>
+<img src="media/storage-add.png" alt="link system"></li>
+</ol>
+<h2 id="configuration">Configuration</h2>
+<h3 id="sql-database">SQL Database</h3>
+<p>The WebJobs service needs a SQL database to store its settings and job data. A valid connection string has to be configured in the <code>appsettings.json</code> file of the service.</p>
+<pre><code>{
+  &quot;ConnectionStrings&quot;: {
+    &quot;DefaultConnection&quot;: &quot;Server=localhost;Database=symbio-service-webjobs;Integrated Security=true&quot;
+  }
+}
+</code></pre><h3 id="external-system">External System</h3>
+<p>The WebJobs service needs to be added as an external system. For basic authentication an authorization token has to be provided. The token can be an arbitrary string.</p>
+<p><img src="media/external-system.png" alt="External system configuration"></p>
+<p>In addition to that the same token string has to be preconfigured inside the config store table of the WebJobs service.</p>
+<p><img src="media/config-store.png" alt="Config store configuration"></p>
+<h2 id="dashboard">Dashboard</h2>
+<p>Queued and failed jobs can be managed in the Hangfire dashboard. To reach the dashboard simply call the URL of the service.</p>
+<p>By default Hangfire allows access to Dashboard pages only for local requests, which will be problematic once the service runs in a managed environment like an Azure App Service. To grant access to the dashboard different means of authentication/authorization were added to the service and can be configured via appsettings.json.</p>
+<h3 id="disabling-authorization">Disabling Authorization</h3>
+<p>Authorization can be disabled by setting <code>DisableAuthorization</code> to <code>true</code>. This should only be used in an isolated test environment and is not recommended for productive use.</p>
+<pre><code class="lang-json">{
+  ...
+  &quot;DisableAuthorization&quot;: false
+}
+</code></pre><h3 id="azure-active-directory-authentication">Azure Active Directory Authentication</h3>
+<p>To authenticate users with an Azure Active Directory register the service as an application as described in the <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v1-add-azure-ad-app">official documentation</a>. Set the appropriate settings in <code>appsettings.json</code>.</p>
+<pre><code class="lang-json">{
+    ...
+    &quot;AzureAd&quot;: {
+        &quot;Enabled&quot;: &quot;true&quot;,
+        &quot;Instance&quot;: &quot;https://login.microsoftonline.com/&quot;,
+        &quot;Domain&quot;: &quot;&lt;Service URL&gt;&quot;,
+        &quot;TenantId&quot;: &quot;&lt;Directory ID&gt;&quot;,
+        &quot;ClientId&quot;: &quot;&lt;Application ID&gt;&quot;,
+        &quot;CallbackPath&quot;: &quot;/signin-oidc&quot;
+    },
+    ...
+}
+</code></pre><h3 id="forms-authentication">Forms Authentication</h3>
+<p>To use forms authentication the following prerequisites must be fulfilled:</p>
+<ul>
+<li><code>DisableAuthorization</code> is set to <code>false</code></li>
+<li><code>AzureAd.Enabled</code> is set to <code>false</code></li>
+<li>The login credentials for the administrator user of the Hangfire dashboard are already stored in the config store table used by the service.</li>
+</ul>
+<p><img src="media/config-store.png" alt="config store"></p>
+<p>The password is stored as a strongly hashed and salted string for security reasons. To create a new password hash use the form at <code>http(s)://&lt;Service URL&gt;/register</code>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/services/web-jobs-scheduler.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

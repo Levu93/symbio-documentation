@@ -1,0 +1,698 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Elements </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Elements ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="elementslist">
+<h1 id="elements">Elements</h1>
+
+<p><strong>api-version</strong>: 1.0</p>
+<p>Retrieves the list of elements.</p>
+<pre><code>POST /{collectionId}/{storageId}/_api/rest/facets/{facetId}/views/{viewId}/elements
+</code></pre><p>With optional parameters</p>
+<pre><code>POST /{collectionId}/{storageId}/_api/rest/facets/{facetId}/views/{viewId}/elements?$filter={filter}&amp;$select={select}&amp;$expandRelated={expand}&amp;$page={page}&amp;$pageSize={pageSize}&amp;$pageSelectionKey={pageSelectionKey}
+</code></pre><h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>collectionId</td>
+<td>path</td>
+<td>true</td>
+<td>string</td>
+<td>The ID of the storage collection.</td>
+</tr>
+<tr>
+<td>storageId</td>
+<td>path</td>
+<td>true</td>
+<td>string</td>
+<td>The ID of the tenant.</td>
+</tr>
+<tr>
+<td>facetId</td>
+<td>path</td>
+<td>true</td>
+<td>string</td>
+<td>The name of the facet.</td>
+</tr>
+<tr>
+<td>viewId</td>
+<td>path</td>
+<td>true</td>
+<td>string</td>
+<td>The name of the view.</td>
+</tr>
+<tr>
+<td>elementId</td>
+<td>path</td>
+<td>true</td>
+<td>string</td>
+<td>The ID of the element.</td>
+</tr>
+<tr>
+<td>$filter</td>
+<td>query</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>$resources</td>
+<td>query</td>
+<td></td>
+<td>string [&quot;attributes&quot;, &quot;related&quot;, &quot;children&quot;, &quot;content&quot;, &quot;rootPath&quot;]</td>
+<td>The resources to include. If not specified all resources will be included.</td>
+</tr>
+<tr>
+<td>$select</td>
+<td>query</td>
+<td></td>
+<td>string</td>
+<td>A comma separated list of namesof the attributes/related contexts to include.</td>
+</tr>
+<tr>
+<td>$expandRelated</td>
+<td>query</td>
+<td></td>
+<td>string</td>
+<td>A comma separated list of names of the related contexts to expand.</td>
+</tr>
+<tr>
+<td>$page</td>
+<td>query</td>
+<td></td>
+<td>integer</td>
+<td>The page number.</td>
+</tr>
+<tr>
+<td>$pageSize</td>
+<td>query</td>
+<td></td>
+<td>integer</td>
+<td>The page size.</td>
+</tr>
+<tr>
+<td>$pageSelectionKey</td>
+<td>query</td>
+<td></td>
+<td>string</td>
+<td>The ID of the element whose page will be fetched.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="responses">Responses</h2>
+<h3 id="success-200">Success 200</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count</td>
+<td>integer</td>
+<td>The number of returned values.</td>
+</tr>
+<tr>
+<td>values</td>
+<td><a href="#element">Element[]</a></td>
+<td>The list of elements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error-4xx">Error 4xx</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>The error message</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="#operationresulttype">OperationResultType</a></td>
+<td>The result type.</td>
+</tr>
+<tr>
+<td>data</td>
+<td><a href="#error">Error[]</a></td>
+<td>The list of errors.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<h3 id="get-the-list-of-elements-from-the-tree-view-of-the-processes-facet">Get the list of elements from the <em>tree</em> view of the <em>processes</em> facet</h3>
+<h4 id="request">Request</h4>
+<pre><code>POST https://demo.symbioworld.com/pz/showcase/_api/rest/facets/processes/views/tree/elements
+</code></pre><h4 id="reponse-200-ok">Reponse (200 OK)</h4>
+<pre><code class="lang-json">{
+    &quot;count&quot;: 2,
+    &quot;values&quot;: [
+        {
+            &quot;id&quot;: &quot;ab2835f8-da30-4e36-a863-456e1105bb58&quot;,
+            &quot;type&quot;: &quot;processHouse&quot;,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: {
+                    &quot;1031&quot;: &quot;Prozesshaus&quot;,
+                    &quot;1033&quot;: &quot;Process House&quot;
+                },
+                &quot;state1&quot;: {
+                    &quot;127&quot;: &quot;ValueType.AVTX_SHOW.ApiName&quot;
+                }
+            },
+            &quot;related&quot;: {
+                &quot;owner&quot;: [
+                    {
+                        &quot;id&quot;: &quot;0630c057-6ba7-47fd-a72f-c9bb80bf18b1&quot;,
+                        &quot;type&quot;: &quot;user&quot;,
+                        &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Users/views/List/elements/0630c057-6ba7-47fd-a72f-c9bb80bf18b1&quot;
+                    }
+                ]
+            },
+            &quot;children&quot;: [
+                {
+                    &quot;id&quot;: &quot;20e369c5-f0f8-491b-9e7f-f15db6a0fb80&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/20e369c5-f0f8-491b-9e7f-f15db6a0fb80&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;24c2a5a1-cdb5-40e7-bb59-4e3d9b1a7ee2&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/24c2a5a1-cdb5-40e7-bb59-4e3d9b1a7ee2&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;6823ca8f-1a8b-43e8-ae8c-8b2ef3bd0deb&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/6823ca8f-1a8b-43e8-ae8c-8b2ef3bd0deb&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;9af65492-279c-414d-960b-9a3cdf552142&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/9af65492-279c-414d-960b-9a3cdf552142&quot;
+                }
+            ],
+            &quot;content&quot;: [
+                {
+                    &quot;id&quot;: &quot;20e369c5-f0f8-491b-9e7f-f15db6a0fb80&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/20e369c5-f0f8-491b-9e7f-f15db6a0fb80&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;24c2a5a1-cdb5-40e7-bb59-4e3d9b1a7ee2&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/24c2a5a1-cdb5-40e7-bb59-4e3d9b1a7ee2&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;6823ca8f-1a8b-43e8-ae8c-8b2ef3bd0deb&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/6823ca8f-1a8b-43e8-ae8c-8b2ef3bd0deb&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;9af65492-279c-414d-960b-9a3cdf552142&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/9af65492-279c-414d-960b-9a3cdf552142&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;883669b6-83af-4ce9-b532-b0ba929bef71&quot;,
+            &quot;type&quot;: &quot;view&quot;,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: {
+                    &quot;1031&quot;: &quot;Views&quot;,
+                    &quot;1033&quot;: &quot;Views&quot;
+                },
+                &quot;state1&quot;: {
+                    &quot;127&quot;: &quot;ValueType.AVTX_SHOW.ApiName&quot;
+                }
+            },
+            &quot;related&quot;: {
+                &quot;author&quot;: [
+                    {
+                        &quot;id&quot;: &quot;ab01a052-80f2-4fbf-8e21-698cb7095b34&quot;,
+                        &quot;type&quot;: &quot;user&quot;,
+                        &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Users/views/List/elements/ab01a052-80f2-4fbf-8e21-698cb7095b34&quot;
+                    }
+                ],
+                &quot;owner&quot;: [
+                    {
+                        &quot;id&quot;: &quot;0630c057-6ba7-47fd-a72f-c9bb80bf18b1&quot;,
+                        &quot;type&quot;: &quot;user&quot;,
+                        &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Users/views/List/elements/0630c057-6ba7-47fd-a72f-c9bb80bf18b1&quot;
+                    }
+                ]
+            },
+            &quot;children&quot;: [
+                {
+                    &quot;id&quot;: &quot;c6e90187-b9f6-4787-9932-abfea54f5463&quot;,
+                    &quot;type&quot;: &quot;view&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/c6e90187-b9f6-4787-9932-abfea54f5463&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;0bcbcd60-1d5b-4c95-a9ef-6e784df55dad&quot;,
+                    &quot;type&quot;: &quot;view&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/0bcbcd60-1d5b-4c95-a9ef-6e784df55dad&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;8db17967-8d30-4b75-9eab-434e85bd7df3&quot;,
+                    &quot;type&quot;: &quot;view&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/8db17967-8d30-4b75-9eab-434e85bd7df3&quot;
+                }
+            ],
+            &quot;content&quot;: [
+                {
+                    &quot;id&quot;: &quot;c6e90187-b9f6-4787-9932-abfea54f5463&quot;,
+                    &quot;type&quot;: &quot;view&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/c6e90187-b9f6-4787-9932-abfea54f5463&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;0bcbcd60-1d5b-4c95-a9ef-6e784df55dad&quot;,
+                    &quot;type&quot;: &quot;view&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/0bcbcd60-1d5b-4c95-a9ef-6e784df55dad&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;8db17967-8d30-4b75-9eab-434e85bd7df3&quot;,
+                    &quot;type&quot;: &quot;view&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/8db17967-8d30-4b75-9eab-434e85bd7df3&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre><h3 id="get-the-list-of-elements-from-the-tree-view-of-the-processes-facet-with-the-resources-attributes-and-children">Get the list of elements from the <em>tree</em> view of the <em>processes</em> facet with the resources <em>attributes</em> and <em>children</em></h3>
+<h4 id="request-1">Request</h4>
+<pre><code>POST https://demo.symbioworld.com/pz/showcase/_api/rest/facets/processes/views/tree/elements?$resources=attributes,children
+</code></pre><h4 id="reponse-200-ok-1">Reponse (200 OK)</h4>
+<pre><code class="lang-json">{
+    &quot;count&quot;: 2,
+    &quot;values&quot;: [
+        {
+            &quot;id&quot;: &quot;ab2835f8-da30-4e36-a863-456e1105bb58&quot;,
+            &quot;type&quot;: &quot;processHouse&quot;,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: {
+                    &quot;1031&quot;: &quot;Prozesshaus&quot;,
+                    &quot;1033&quot;: &quot;Process House&quot;
+                },
+                &quot;state1&quot;: {
+                    &quot;127&quot;: &quot;ValueType.AVTX_SHOW.ApiName&quot;
+                }
+            },
+            &quot;children&quot;: [
+                {
+                    &quot;id&quot;: &quot;20e369c5-f0f8-491b-9e7f-f15db6a0fb80&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/20e369c5-f0f8-491b-9e7f-f15db6a0fb80&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;24c2a5a1-cdb5-40e7-bb59-4e3d9b1a7ee2&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/24c2a5a1-cdb5-40e7-bb59-4e3d9b1a7ee2&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;6823ca8f-1a8b-43e8-ae8c-8b2ef3bd0deb&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/6823ca8f-1a8b-43e8-ae8c-8b2ef3bd0deb&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;9af65492-279c-414d-960b-9a3cdf552142&quot;,
+                    &quot;type&quot;: &quot;subCategory&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/9af65492-279c-414d-960b-9a3cdf552142&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;883669b6-83af-4ce9-b532-b0ba929bef71&quot;,
+            &quot;type&quot;: &quot;view&quot;,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: {
+                    &quot;1031&quot;: &quot;Views&quot;,
+                    &quot;1033&quot;: &quot;Views&quot;
+                },
+                &quot;state1&quot;: {
+                    &quot;127&quot;: &quot;ValueType.AVTX_SHOW.ApiName&quot;
+                }
+            },
+            &quot;children&quot;: [
+                {
+                    &quot;id&quot;: &quot;c6e90187-b9f6-4787-9932-abfea54f5463&quot;,
+                    &quot;type&quot;: &quot;view&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/c6e90187-b9f6-4787-9932-abfea54f5463&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;0bcbcd60-1d5b-4c95-a9ef-6e784df55dad&quot;,
+                    &quot;type&quot;: &quot;view&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/0bcbcd60-1d5b-4c95-a9ef-6e784df55dad&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;8db17967-8d30-4b75-9eab-434e85bd7df3&quot;,
+                    &quot;type&quot;: &quot;view&quot;,
+                    &quot;expandUri&quot;: &quot;https://demo.symbioworld.com/pz/showcase/_api/rest/facets/Processes/views/TreeAndDiagram/elements/8db17967-8d30-4b75-9eab-434e85bd7df3&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre><h3 id="get-the-list-of-storage-collections">Get the list of storage collections</h3>
+<div class="NOTE"><h5>Note</h5><p>This call only works on the <em>_sysadmin</em> collection and <em>_admin</em> storage.</p>
+</div>
+<h4 id="request-2">Request</h4>
+<pre><code>POST https://demo.symbioworld.com/_sysadmin/_admin/_api/rest/facets/collections/views/list/elements
+</code></pre><h4 id="reponse-200-ok-2">Reponse (200 OK)</h4>
+<pre><code class="lang-json">{
+    &quot;count&quot;: 1,
+    &quot;values&quot;: [
+        {
+            &quot;id&quot;: &quot;0c0f489a-bc63-4f75-ac0b-054f33083878&quot;,
+            &quot;type&quot;: &quot;collection&quot;,
+            &quot;attributes&quot;: {
+                &quot;id&quot;: {
+                    &quot;127&quot;: &quot;pz&quot;
+                },
+                &quot;name&quot;: {
+                    &quot;1031&quot;: &quot;pz&quot;,
+                    &quot;1033&quot;: &quot;pz&quot;
+                }
+            }
+        }
+    ]
+}
+</code></pre><h3 id="get-the-list-of-storages-of-a-specific-collection">Get the list of storages of a specific collection</h3>
+<div class="NOTE"><h5>Note</h5><p>This call only works on the <em>_admin</em> storage.</p>
+</div>
+<h4 id="request-3">Request</h4>
+<pre><code>POST https://demo.symbioworld.com/pz/_admin/_api/rest/facets/storages/views/detail/elements
+</code></pre><h4 id="reponse-200-ok-3">Reponse (200 OK)</h4>
+<pre><code class="lang-json">{
+    &quot;count&quot;: 1,
+    &quot;values&quot;: [
+        {
+            &quot;id&quot;: &quot;b028e1b3-88e8-4564-be04-bb9f204c842b&quot;,
+            &quot;type&quot;: &quot;storage&quot;,
+            &quot;attributes&quot;: {
+                &quot;changedOn&quot;: {
+                    &quot;127&quot;: &quot;2018-03-07T10:09:41&quot;
+                },
+                &quot;createdOn&quot;: {
+                    &quot;127&quot;: &quot;2018-03-07T10:09:06&quot;
+                },
+                &quot;id&quot;: {
+                    &quot;127&quot;: &quot;showcase&quot;
+                },
+                &quot;name&quot;: {
+                    &quot;1031&quot;: &quot;showcase&quot;,
+                    &quot;1033&quot;: &quot;showcase&quot;
+                }
+            },
+            &quot;related&quot;: {
+                &quot;changedBy&quot;: [
+                    {
+                        &quot;id&quot;: &quot;a364f30b-a126-4a74-9e1a-1df87f2a6074&quot;,
+                        &quot;type&quot;: &quot;user&quot;,
+                        &quot;expandUri&quot;: &quot;https://demo.symbioweb.com/pz/_admin/Master_api/rest/facets/Users/views/List/elements/a364f30b-a126-4a74-9e1a-1df87f2a6074&quot;
+                    }
+                ],
+                &quot;createdBy&quot;: [
+                    {
+                        &quot;id&quot;: &quot;a364f30b-a126-4a74-9e1a-1df87f2a6074&quot;,
+                        &quot;type&quot;: &quot;user&quot;,
+                        &quot;expandUri&quot;: &quot;https://demo.symbioweb.com/pz/_admin/Master_api/rest/facets/Users/views/List/elements/a364f30b-a126-4a74-9e1a-1df87f2a6074&quot;
+                    }
+                ]
+            }
+        }
+    ]
+}
+</code></pre><h2 id="definitions">Definitions</h2>
+<h3 id="element">Element</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>The ID of the element.</td>
+</tr>
+<tr>
+<td>versionId</td>
+<td>string</td>
+<td>The ID of the specific version.</td>
+</tr>
+<tr>
+<td>creationId</td>
+<td>string</td>
+<td>The ID of the element from which this element originated.</td>
+</tr>
+<tr>
+<td>state</td>
+<td>string</td>
+<td>The current state of the element.</td>
+</tr>
+<tr>
+<td>stereotype</td>
+<td>Element</td>
+<td>The stereotype of the element.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>The type of the element.</td>
+</tr>
+<tr>
+<td>attributes</td>
+<td></td>
+<td>The attributes of the element.</td>
+</tr>
+<tr>
+<td>related</td>
+<td>Element[]</td>
+<td>The list of related elements.</td>
+</tr>
+<tr>
+<td>children</td>
+<td>Element[]</td>
+<td>The list of child elements.</td>
+</tr>
+<tr>
+<td>content</td>
+<td>Element[]</td>
+<td>The list of content elements.</td>
+</tr>
+<tr>
+<td>rootPath</td>
+<td>Element[]</td>
+<td>The list of hierarchical parent elements to the root element.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operationresulttype">OperationResultType</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>critical</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error</td>
+<td>string</td>
+</tr>
+<tr>
+<td>warning</td>
+<td>string</td>
+</tr>
+<tr>
+<td>success</td>
+<td>string</td>
+</tr>
+<tr>
+<td>unauthorized</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error">Error</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>The error message.</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/developer/rest-api/reference/elements-list.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

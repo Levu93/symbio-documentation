@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Signing requests from Symbio to the IdP </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Signing requests from Symbio to the IdP ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="signing-requests-from-symbio-to-the-idp">Signing requests from Symbio to the IdP</h1>
+
+<h2 id="overview">Overview</h2>
+<p>To make sure an authentication request comes from a trustworthy Service Provider some Identity Provider demand the requests to be signed with a Service Provider certificate.</p>
+<p>The Service Provider (here: Symbio) has to have a PFX/P12 archive which combines a private key and its X509 certificate.</p>
+<p>The Indentity Provider (e.g. ADFS) has to be informed about the X509 certificate (without the private key, e.g. as CER file).</p>
+<p><strong>As soon as such a PFX file is strored in Symbio in a SAML activated database (or collection) all requests addressed to the configured IdP are signed automatically.</strong></p>
+<p>For the signing the SHA256-Hash algorithm is used.</p>
+<p><strong>The PFX file must not contain a password (or the password can be the empty string &quot;&quot;).</strong></p>
+<p><strong>Moreover, the PFX file must be stored without encryption in the datbase (or collection).</strong></p>
+<h2 id="set-up">Set-up</h2>
+<p> <img src="media/SAML_Symbio_Settings.jpg" alt="SAML Symbio Settings"></p>
+<ul>
+<li>&quot;1. SAML group management&quot; has been activated and the respective SAML user groups are created and authorized as well as</li>
+<li>&quot;2.a) Entity ID&quot;, &quot;2.b) Meta data&quot;, &quot;2.c) SSO Service URL&quot; have been configured the</li>
+<li>&quot;3. Optional certificate for request signing&quot; can be uploaded.</li>
+</ul>
+<p>All future requests addressed to the IdP will be signed automatically (no matter if necessary or not).</p>
+<h2 id="creating-a-certificate-openssl--windows-certification-center">Creating a certificate (OpenSSL + Windows certification center)</h2>
+<p>Please adjust the file names PuZ-Dev-Cert.* according to your requirements.</p>
+<ol>
+<li><p>Creating a key and a certification request</p>
+<p> The key for the certificate has to be generated by RSA and should be at least 2048 Bit long.
+ OpenSSL (<a href="https://www.openssl.org/">https://www.openssl.org/</a>) can be used, for example:</p>
+<pre><code class="lang-cmd">openssl req -newkey rsa:2048 -subj &amp;quot;/C=DE/ST=NRW/L=Dortmund/O=Ploetz + Zeller GmbH/OU=Dev/CN=PuZ-Dev-Cert/&amp;quot; -nodes -sha256 -keyout PuZ-Dev-Cert.key -out PuZ-Dev-Cert.csr -reqexts v3\_req
+</code></pre><p> Please change the subject &quot;/C=DE/ST=NRW/L=Dortmund/O=Ploetz + Zeller GmbH/OU=Dev/CN=PuZ-Dev-Cert/&quot; to fit your company:</p>
+<p> C= Country (2 letters-country code)</p>
+<p> ST= State (federal state/province, can be written in full)</p>
+<p> L= Location (city your company is located in)</p>
+<p> O= Organization (name of your company)</p>
+<p> OU= Organizational Unit (the department/unit in charge of Symbio, e.g. IT, PM or QM)</p>
+<p> CN= Common Name (name of the certificate)</p>
+<p> If you create a password for the *.KEY file, please memorize it well because you will need it later.</p>
+</li>
+<li><p>Creating the certificate</p>
+<p> Please execute the following command on the Windows server on which your certification instance is managed and follow the instructions of the dialog which appears:</p>
+<pre><code class="lang-cmd">certreq -submit -attrib &amp;quot;CertificateTemplate:User&amp;quot;
+</code></pre><p> The certificate request file asked for in the dialog is the *.CSR file created in the previous step. The selected template ensures that the created certificate may be used so sign messages.</p>
+<p> If you are asked for the format of the certificate please do <strong>not</strong> choose Binary. Save the certificate file as *.CER.</p>
+</li>
+<li><p>Creating the PFX file</p>
+<p> Using OpenSSL you can combine the certificate you have just created and the private key from the first step to a PFX file:</p>
+<pre><code class="lang-cmd">openssl pkcs12 -export -in PuZ-Dev-Cert.cer -inkey PuZ-Dev-Cert.key -CSP &amp;quot;Microsoft Enhanced RSA and AES Cryptographic Provider&amp;quot; -out PuZ-Dev-Cert.pfx |
+</code></pre><p> Please do not create a password for the *.PFX file.</p>
+</li>
+<li><p>Using the created files</p>
+<p> Now please store the certificate (*.CER file) in your SAML Identity Provider as signing certificate of the Service Providers Symbio. This is the respective entry in the ADFS:</p>
+<p> <img src="media/OpenSSL.jpg" alt="OpenSSL"></p>
+<p> Finally, please call up the SAML settings of your Symbio database and upload the *.PFX file as &quot;3. Optional certificate for request signing&quot;.</p>
+<p> From now on all requests addressed to the IdP will be signed automatically.</p>
+</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/installation-guide/installation/Signing-requests-to-IdP.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

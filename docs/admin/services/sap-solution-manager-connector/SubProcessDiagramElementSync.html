@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sub Process diagram elements Synchronization </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Sub Process diagram elements Synchronization ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="sub-process-diagram-elements-synchronization">Sub Process diagram elements Synchronization</h1>
+
+<hr>
+<h3 id="warning">Warning</h3>
+<h5 id="currently-the-sub-process-sychrnoization-doesnt-work-and-the-fix-from-the-sap-is-waited-in-order-for-this-functionality-to-work">Currently the sub process sychrnoization doesnt work, and the fix from the SAP is waited in order for this functionality to work.</h5>
+<hr>
+<p>In this article you will be introduced with the basic rules of how the synchrnoization of sub process diagram elements is working.</p>
+<h2 id="synchronizing-sub-process-diagram-element-from-symbio-to-solman">Synchronizing sub process diagram element from Symbio to SolMan</h2>
+<p>A sub process in Symbio can have multiple forms. Depending on how it is modeled in Symbio the synchrnoization of it to SolMan will work differently.
+In the nex table you will see a biref explanation of all cases that will be explained in more detail.</p>
+<table>
+<thead>
+<tr>
+<th>Symbio element</th>
+<th>SolMan element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface</td>
+<td>Empty sub process</td>
+</tr>
+<tr>
+<td>Empty sub process</td>
+<td>Empty sub process</td>
+</tr>
+<tr>
+<td>Sub process with nested diagram</td>
+<td>Referenced sub process with a new diagram</td>
+</tr>
+<tr>
+<td>Reference sub process</td>
+<td>Referenced sub process</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1interface">1.Interface</h3>
+<p>In Symbio interface is just a placeholder that will in future become a sub process reference. When the interface is synchronized it will becoe an empty sub process in SolMan.</p>
+<hr>
+<p><img src="media/interfaceSymbio.png" alt="Test"></p>
+<hr>
+<p>After synchronizing the interface should look like this</p>
+<hr>
+<p><img src="media/interfaceSolMan.png" alt="Test"></p>
+<hr>
+<h3 id="2-empty-sub-process">2. Empty Sub Process</h3>
+<p>In Symbio the user can create an empty sub process. That is a sub process that doesnt have any nested diagram and also doesnt have references to other sub processes in the structure. </p>
+<hr>
+<p><img src="media/emptySubProcessSymbio.png" alt="Test"></p>
+<hr>
+<p>When this element is synchronized to SolMan it will also be an empty sub process.</p>
+<hr>
+<p><img src="media/emptySubProcessSolMan.png" alt="Test"></p>
+<hr>
+<h3 id="3nested-sub-process">3.Nested Sub Process</h3>
+<p>In Symbio the user can create a nested sub process. That is a sub process that has a nested diagram with elements.</p>
+<hr>
+<p><img src="media/subProcessNestedSymbio1.png" alt="Test"></p>
+<hr>
+<p>This sub process has a diagram with elements.</p>
+<hr>
+<p><img src="media/subProcessNestedSymbio2.png" alt="Test"></p>
+<hr>
+<p>In SolMan one sub process cannot have another sub process as a child so the nested sub process will not synchronized, only its diagram will be added as a diagram of the main sub process.</p>
+<hr>
+<p><img src="media/subProcessNestedSolMan1.png" alt="Test"></p>
+<hr>
+<p>The nested diagram element should have a reference to a nested diagram.</p>
+<hr>
+<p><img src="media/subProcessNestedSolMan2.png" alt="Test"></p>
+<hr>
+<p><img src="media/subProcessNestedSolMan3.png" alt="Test"></p>
+<hr>
+<p><strong>Tips</strong></p>
+<p>1.You cannot synchrnoize a sub process that has a sub process as a parent</p>
+<hr>
+<p><img src="media/NestedSubProcessSync.png" alt="Test"></p>
+<hr>
+<p>2.You can have more levels of nested sub processes. Every nested sub process will result in a new diagram attached to the main sub process</p>
+<hr>
+<h3 id="4sub-process-references">4.Sub process references</h3>
+<p>In Symbio a user can create a diagram element that holds a reference to another sub process in the structure.</p>
+<hr>
+<p><img src="media/SubProcessReferenceSymbio.png" alt="Test"></p>
+<hr>
+<p>Wehn this element is synchronized in SolMan it will also be a sub process with a reference. A scepial link attribute will be added to the sub process.</p>
+<hr>
+<p><img src="media/SubProcessReferenceSolMan1.png" alt="Test"></p>
+<hr>
+<p>The diagram element should contain also a reference to the referenced sub process</p>
+<hr>
+<p><img src="media/SubProcessReferenceSolMan2.png" alt="Test"></p>
+<hr>
+<p><strong>Tips</strong></p>
+<ol>
+<li>All the referenced sub processes will also be synchronized with its root path </li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/services/sap-solution-manager-connector/SubProcessDiagramElementSync.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

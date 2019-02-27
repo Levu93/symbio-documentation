@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Symbio SSO </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Symbio SSO ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="setting-up-saml">
+<h1 id="symbio-sso">Symbio SSO</h1>
+
+<h2 id="setting-up-saml-based-sso">Setting Up SAML-based SSO</h2>
+<p>SAML has to be set up on the Identity Provider (IdP) and the Service Provider (SP), thereby creating the mutual trust relation.</p>
+<h3 id="basic-requirements">Basic requirements</h3>
+<p>The following basic requirements must be fullfilled to consider SAML-based SSO at all:</p>
+<ul>
+<li>SAML 2.0-compliant IdP with<ul>
+<li>SSO-REDIRECT endpoint</li>
+<li>ability to POST to an ACS endpoint</li>
+<li>SHA-256 signature support</li>
+<li>IdP Metadata XML file</li>
+<li>a trustworthy (in respect to your organization) certificate contained in the Metadata file</li>
+</ul>
+</li>
+<li>Symbio installed on a HTTPS/SSL/TLS binding</li>
+<li>IdP and Symbio reachable by browsers in the company networking scenario</li>
+</ul>
+<h3 id="setting-up-the-idp">Setting up the IdP</h3>
+<p>To set up the IdP you need to define Symbio as a relying party trust. The following information is essential for that:</p>
+<ul>
+<li>SP Entity ID: The unique ID/name of the SP<ul>
+<li>To be configured in newer Symbio versions - decide on an appropriate string beforehand, we suggest something like this: &quot;urn:symbio.company.tld:an-additional-instance-id&quot;</li>
+<li>Predefined for older Symbio versions: &quot;<a href="http://symbioworld.com/web">http://symbioworld.com/web</a>&quot;</li>
+</ul>
+</li>
+<li>SSO-REDIRECT: Accept requests by Symbio at the SSO-REDIRECT endpoint</li>
+<li>ACS-POST: Send responses to the ACS endpoint of Symbio via POST</li>
+<li>Request Signing/Encryption: Symbio does not (normally) sign nor encrypt requests</li>
+<li>Response Signing/Encryption: Symbio expects responses to be signed</li>
+</ul>
+<p>The URL of Symbio is most likely needed during IdP configuration. Sometimes the ACS endpoint URL is also needed. This can be derived from the Symbio URL:</p>
+<ul>
+<li>Symbio URL example: <a href="https://symbio.company.tld">https://symbio.company.tld</a></li>
+<li>Corresponding ACS URL: <a href="https://symbio.company.tld/AuthServices/Acs">https://symbio.company.tld/AuthServices/Acs</a></li>
+</ul>
+<p>If Symbio is mapped to a path, the path needs to be included:</p>
+<ul>
+<li>Symbio URL example with path: <a href="https://portal.company.tld/symbio/production">https://portal.company.tld/symbio/production</a></li>
+<li>Corresponding ACS URL with path: <a href="https://portal.company.tld/symbio/production/AuthServices/Acs">https://portal.company.tld/symbio/production/AuthServices/Acs</a></li>
+</ul>
+<p>Never include database collections nor databases in these URLs; the ACS endpoint is used by all databases and collections of a Symbio instance.</p>
+<p>Attention: Symbio only supports SP-initiated authentication. Please bear this in mind when setting up your IdP.</p>
+<h4 id="transmitted-claims">Transmitted Claims</h4>
+<p>Symbio expects the following claims:</p>
+<ul>
+<li>UPN (upn: <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn</a>)</li>
+<li>Last Name (surname: <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</a>)</li>
+<li>First Name (givenname: <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</a>)</li>
+<li>E-Mail (emailaddress: <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</a>)</li>
+</ul>
+<p>For rights management group claims should also be transmitted:</p>
+<ul>
+<li>Group (group: <a href="http://schemas.xmlsoap.org/claims/Group">http://schemas.xmlsoap.org/claims/Group</a>)</li>
+</ul>
+<p>If your system cannot provide these claims, please see &quot;Custom Claims Mapping&quot; below.</p>
+<h3 id="setting-up-symbio-as-the-sp">Setting up Symbio as the SP</h3>
+<p>The most important part to set up Symbio as the SP is the Metadata XML file of the IdP. Normally all other information can be derived from this file:</p>
+<ul>
+<li>SP Entity ID: The unique ID/name of the SP (see above, &quot;Setting up the IdP&quot;)<ul>
+<li>Newer versions of Symbio allow &amp; require you to define it yourself</li>
+<li>Older versions of Symbio have a predefined ID</li>
+</ul>
+</li>
+<li>IdP Entity ID: The unique ID/name of the IdP (can normally be found near the top of the Metadata XML)</li>
+<li>IdP Metadata XML file: You can choose to provide it in several ways to Symbio:<ul>
+<li>Upload: The file will be stored locally and no network requests are required to retrieve its contents. If the certificate for signing responses changes on the IdP you need to update the upload in Symbio.</li>
+<li>URL: The file will not be stored locally, it will be cached temporarily to reduce network traffic. Certificate changes on the IdP do not require updates on the Symbio side. The Symbio instance must be able to access the Metadata URL of the IdP.</li>
+</ul>
+</li>
+<li>IdP SSO Service URL: The SSO-REDIRECT endpoint URL of the IdP (can normally be found near the bottom of the Metadata XML)</li>
+</ul>
+<h3 id="advanced-setup-topics">Advanced Setup Topics</h3>
+<h4 id="explict-sp-host-url">Explict SP Host URL</h4>
+<p>In some scenarios Symbio might be accessed via another URL than the one of the host Symbio is installed on (e.g. when accessed via a proxy server). In such a case the host URL of Symbio needs to be adjusted for the SAML authentication flow so the IdP can direct the browser back to an address it can access (the proxy instead of Symbio&#39;s host).</p>
+<p>In such a case provide a corresponding &quot;SP Host URL&quot; in Symbio&#39;s SAML configuration (only available in newer versions of Symbio).</p>
+<h4 id="request-signing">Request Signing</h4>
+<p>Symbio supports request signing but does not use it by default. To enable request signing you need to provide a certificate to Symbio via its SAML configuration. This certificate must provided as a file which fullfills the following requirements:</p>
+<ul>
+<li>Base64-encoded PFX file</li>
+<li>containing the private key</li>
+<li>without password protection</li>
+</ul>
+<h4 id="custom-claims-mapping">Custom Claims Mapping</h4>
+<p>Some IdPs cannot provide the claims Symbio expects. To mitigate you can provide a Claims Mapping XML file. Symbio comes with a sample XML file in the data directory which provides a mapping that can easily be used with Azure AD.</p>
+<p>Please contact your sales or partner contact person to assist in setting up an individual claims mapping for your system.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/installation-guide/saml-configuration/2_setting-up-saml.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

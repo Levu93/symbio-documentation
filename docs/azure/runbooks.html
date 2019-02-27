@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Preperation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Preperation ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img class="logo" src="../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="preperation">Preperation</h1>
+
+<p>In order to deposit and execute the Runbook in Azure some steps are necessary.<br>These steps are listed in this documentation.</p>
+<hr>
+<h2 id="preparing-azure">Preparing Azure</h2>
+<p>Log in into your Azure subscription and create a new automation account.</p>
+<p><img src="media/automationAccount.jpg" alt="Automation Account" title="Automation Account"></p>
+<p>In the new account select the area Runbooks and create a new Runbook.</p>
+<p><img src="media/newRunbook.jpg" alt="New Runbook" title="New Runbook"></p>
+<p>In the Settings area import the <a href="">RM-Runbook</a>.</p>
+<p><img src="media/runbook.jpg" alt="Import Runbook" title="Import Runbook"></p>
+<p>To use the Runbook automatically you have to publish it as follows:  </p>
+<ul>
+<li>Select the new Runbook  </li>
+<li>Select the possibility to edit  </li>
+<li>Publish the Runbook  </li>
+</ul>
+<h2 id="runbook-credentials">Runbook Credentials</h2>
+<p>The runbook requires special credentials for the target SQL Server, IIS and the target VM.<br>The credentials are stored in your automation account as follows</p>
+<p><img src="media/credentialsArea.jpg" alt="Credentials" title="credentials">  </p>
+<h2 id="preparing-the-azure-vm">Preparing the Azure-VM</h2>
+<p>Select or create your VM and check the DNS Name field in the Overview area.<br>If no DNS name has been maintained, create a new DNS name using the link specified there.</p>
+<p><img src="media/dnsName.jpg" alt="DNS Name" title="DNS Name"></p>
+<p>Select the Networking area and maintain a new inbound port rule with the following settings.</p>
+<p><img src="media/inboundPort.jpg" alt="Inbound Port" title="Inbound Port"></p>
+<table>
+<thead>
+<tr>
+<th>Name of the setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>WinRM</td>
+</tr>
+<tr>
+<td>Destination port ranges</td>
+<td>5986</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>TCP</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="preparation-on-the-vm">Preparation on the VM</h2>
+<p>So that the Runbook can execute actions on the target VM, you must also configure settings on this VM.<br>This can be done using a script or manual Powershell commands.</p>
+<h3 id="execute-automatically">Execute automatically</h3>
+<p>Access the VM as administrator and Download the <a href="">preparation script</a>. Then execute the script as administrator.<br><em><code>Note:Use as DNS name the the in Azure-VM Overview specified DNS Names.</code></em>  </p>
+<h3 id="execute-manually-powershell">Execute manually (Powershell)</h3>
+<p>Access the VM as an administrator and open up Powershell as Administrator. Then execute the following commands.</p>
+<h4 id="self-signed-certificate">Self-signed certificate:</h4>
+<pre><code class="lang-powershell">New-SelfSignedCertificate -DnsName &quot;DNS_NAME&quot; -CertStoreLocation Cert:\LocalMachine\My
+</code></pre><h4 id="winrm-listener">WinRM Listener</h4>
+<pre><code class="lang-powershell">winrm create winrm/config/Listener?Address=*+Transport=HTTPS &#39;@{Hostname=&quot;DNS_NAME&quot;; CertificateThumbprint=&quot;CERTIFICATE_THUMBPRINT&quot;}&#39;
+</code></pre><h4 id="winrm-firewall-rule">WinRM Firewall rule</h4>
+<pre><code class="lang-powershell">New-NetFirewallRule -DisplayName &#39;WinRM HTTPS&#39; -Profile @(&#39;Domain&#39;, &#39;Private&#39;, &#39;Public&#39;) -Direction Inbound -Action Allow -Protocol TCP -LocalPort @(&#39;5986&#39;)
+</code></pre><p><em><code>Note:Use as DNS name the the in Azure-VM Overview specified DNS Names.</code></em><br><em><code>As Thumbprint use the Thumbprint of your self-signed certificate.</code></em></p>
+<hr>
+<p>After everything has been set up, webhooks or time controls can be set up for the Runbook.</p>
+<h4 id="runbook-variables">Runbook Variables</h4>
+<p>The runbook requires some variables. These are stored in the created automation account in the Variables area.</p>
+<p><img src="media/variablesArea.jpg" alt="Variables" title="Variables"></p>
+<p>The following variables must be maintained</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TargetDir</td>
+<td>String</td>
+<td>The folder name in which the installation files are stored.</td>
+</tr>
+<tr>
+<td>DNS Name</td>
+<td>String</td>
+<td>Use as DNS name the the in Azure-VM Overview specified DNS Names.</td>
+</tr>
+<tr>
+<td>SQLCredentialName</td>
+<td>String</td>
+<td>The name of your automation credentials to the SQL-Server.</td>
+</tr>
+<tr>
+<td>IISCredentialName</td>
+<td>String</td>
+<td>The name of your automation credentials to the IIS.</td>
+</tr>
+<tr>
+<td>VMCredentialName</td>
+<td>String</td>
+<td>The name of your automation credentials to the VM.</td>
+</tr>
+<tr>
+<td>Install-PS URI</td>
+<td>String</td>
+<td>The FTP URL to your Installation Powershell.</td>
+</tr>
+<tr>
+<td>SourcePath</td>
+<td>String</td>
+<td>The URL to your installation package.</td>
+</tr>
+<tr>
+<td>InstallDirectory</td>
+<td>String</td>
+<td>The Installatrions location of your Symbio application. E.g. C:\Symbio. Note the double! backslash</td>
+</tr>
+<tr>
+<td>SymbioName</td>
+<td>String</td>
+<td>The name of the Symbio instance. This name is used as a subfolder in the backup and destination path.</td>
+</tr>
+<tr>
+<td>SymbioLicenseKey</td>
+<td>String</td>
+<td>The license key for Symbio will be provided by our team. This license key will be added to the registry. Please also refer to server settings/license key chapter.</td>
+</tr>
+<tr>
+<td>SQLServer</td>
+<td>String</td>
+<td>The SQL Server for your Symbio application.</td>
+</tr>
+<tr>
+<td>SQLDatabase</td>
+<td>String</td>
+<td>The name of the database for your Symbio application</td>
+</tr>
+<tr>
+<td>SQLElasticPool</td>
+<td>String</td>
+<td>The name of the Elastic Pool for your Symbio application</td>
+</tr>
+<tr>
+<td>IISSite</td>
+<td>String</td>
+<td>Name of the WebSite in IIS. Can be left blank if IISSite is equal to SymbioName.</td>
+</tr>
+<tr>
+<td>IISAppPool</td>
+<td>String</td>
+<td>Name of application pool. Should be identical named like the Symbio WebSite.</td>
+</tr>
+<tr>
+<td>IISHostName</td>
+<td>String</td>
+<td>The HostName for you Symbio application. Can be left blank if IISHostName is equal to SymbioName.</td>
+</tr>
+<tr>
+<td>IISCertificateHash</td>
+<td>String</td>
+<td>The thumbprint of the SSL certificate for your Symbio application.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="description-of-the-runbooks">Description of the Runbooks</h1>
+<blockquote><p>The Runbook creates a remote session based on the given credentials and the DNS name.<br>This session is used to perform the following actions with Powershell  </p>
+<p>The target directory is checked and created if necessary.<br>The installation files are downloaded to the VM using the FTP URL.<br>After the Symbio installation files have been downloaded, the installation script is executed.</p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/azure/runbooks.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

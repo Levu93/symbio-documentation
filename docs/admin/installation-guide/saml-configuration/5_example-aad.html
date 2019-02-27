@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Symbio SSO </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Symbio SSO ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="example-aad">
+<h1 id="symbio-sso">Symbio SSO</h1>
+
+<h2 id="worked-example-symbio--azure-ad">Worked Example: Symbio &amp; Azure AD</h2>
+<p>The Microsoft Azure Active Directory provides a SAML 2.0 Identity Provider (IdP) implementation, too, though it does not provide group claims of any kind (see &quot;User &amp; Rights Management Considerations&quot;). The following example describes setting up Symbio as a Service Provider (SP) in and for Azure AD.</p>
+<p>Azure AD and IdP will be used interchangeably, the same holds true for Symbio and SP.</p>
+<h3 id="configuration-of-symbio-in-azure-ad">Configuration of Symbio in Azure AD</h3>
+<p>Before actually configuring Symbio in Azure AD, decide which EntityID you will give to Symbio and under which URL Symbio will be available. For this example we use the following values:</p>
+<ul>
+<li>Symbio EntityID: urn:symbio.example.com:adfs-example</li>
+<li>Symbio URL: <a href="https://processes.example.com/symbio-test/">https://processes.example.com/symbio-test/</a></li>
+</ul>
+<p>In this case Symbio is available via a virtual subdirectory &quot;/symbio-test/&quot; and not directly on the subdomain root level. Append &quot;AuthServices/Acs&quot; to get the ACS URL of your Symbio instance.</p>
+<h4 id="creating-a-new-application-and-defining-claims">Creating a new Application and Defining Claims</h4>
+<p>In your Azure Portal select Azure Active Directory / Enterprise applications - All applications:</p>
+<ul>
+<li>Click &quot;+ New application&quot;</li>
+<li>Choose &quot;Non-Gallery Application&quot;</li>
+<li>Choose &quot;Manual Provisioning&quot;</li>
+<li>Choose &quot;SAML-based Sign-on&quot;</li>
+<li>Enter Identifier (Entity ID): urn:symbio.example.com:adfs-example</li>
+<li>Enter Reply URL (Assertion Consumer Service URL): <a href="https://processes.example.com/symbio-test/AuthServices/Acs">https://processes.example.com/symbio-test/AuthServices/Acs</a></li>
+<li>Select User Identifier: user.userprincipalname</li>
+<li>View and edit all other user attributes:<ul>
+<li>givenname &rarr; user.givename &rarr; <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims">http://schemas.xmlsoap.org/ws/2005/05/identity/claims</a></li>
+<li>surname &rarr; user.surname &rarr; <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims">http://schemas.xmlsoap.org/ws/2005/05/identity/claims</a></li>
+<li>emailaddress &rarr; user.mail &rarr; <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims">http://schemas.xmlsoap.org/ws/2005/05/identity/claims</a></li>
+</ul>
+</li>
+<li>Save changes</li>
+<li>Download the Metadata XML file</li>
+</ul>
+<h3 id="configuration-of-ad-fs-in-symbio">Configuration of AD FS in Symbio</h3>
+<p>The downloaded medatata file is a text file containing XML, you can read it using Notepad/Editor.</p>
+<p>Usually it starts with the <entitydescriptor> tag which has an &quot;entityID&quot; attribute whose value is the IdP EntityID we need to configure Symbio.<p>
+<p>Near the end you will find the <singlesignonservice> elements, look for the one with Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect&quot;, its &quot;Location&quot; attribute value will be needed to configure Symbio.<p>
+<p>Here are the values from the example metadata XML file:</p>
+<p>entityID: <a href="https://sts.windows.net/0ee05e8d-dd1c-4065-a51c-840902926d66/">https://sts.windows.net/0ee05e8d-dd1c-4065-a51c-840902926d66/</a>
+Location: <a href="https://login.microsoftonline.com/0ee05e8d-dd1c-4065-a51c-840902926d66/saml2">https://login.microsoftonline.com/0ee05e8d-dd1c-4065-a51c-840902926d66/saml2</a></p>
+<h4 id="setting-up-a-new-saml-authentication-provider-in-symbio">Setting up a new SAML Authentication Provider in Symbio</h4>
+<p>Login as an administrator to the database or collection for which you want to activate SAML login. For this example we will set up SAML login for database &quot;GreenField&quot; in collection &quot;Testing&quot;, the corresponding URL is <a href="https://processes.example.com/symbio-test/Testing/GreenField/editor/1033/">https://processes.example.com/symbio-test/Testing/GreenField/editor/1033/</a></p>
+<p>Switch to the Admin section and there to Authentication Providers. Make sure that the root node is set to &quot;Use local&quot; and then add a new SAML Authentication Provider with ID &quot;AAD&quot;. Select it and adjust its details:</p>
+<ul>
+<li>Translate (if you wish) - the ID stays &quot;AAD&quot;<ul>
+<li>English: Azure Login</li>
+<li>German: Azure Anmeldung</li>
+</ul>
+</li>
+<li>Standard role: Viewer</li>
+<li>Group management: No</li>
+<li>Symbio EntityID: urn:symbio.example.com:adfs-example</li>
+<li>Symbio Host URL: <a href="https://processes.example.com/symbio-test/">https://processes.example.com/symbio-test/</a></li>
+<li>IdP EntityID: <a href="https://sts.windows.net/0ee05e8d-dd1c-4065-a51c-840902926d66/">https://sts.windows.net/0ee05e8d-dd1c-4065-a51c-840902926d66/</a></li>
+<li>IdP Metadata: (upload the XML file or link to it, see below)</li>
+<li>IdP SSO service URL: <a href="https://login.microsoftonline.com/0ee05e8d-dd1c-4065-a51c-840902926d66/saml2">https://login.microsoftonline.com/0ee05e8d-dd1c-4065-a51c-840902926d66/saml2</a></li>
+<li>Optional claim mapping: data &gt; sso - azuread-samlclaimsmapping.xml</li>
+<li>Enabled: Yes</li>
+<li>Visible: Yes</li>
+</ul>
+<h5 id="symbio-in-cloud">Symbio in Cloud</h5>
+<p>If your Symbio web server can reach the Azure AD servers, consider adding the Metadata XML file as a URL (see above) instead of downloading it from Azure AD and then uploading it to Symbio. That way changes to the metadata (e.g. a new certficate) don&#39;t require manual updates to Symbio.</p>
+<h5 id="symbio-on-premise">Symbio on Premise</h5>
+<p>Don&#39;t add the Metadata XML file as a URL. The Intranet server will most likely have no access to Azure AD servers on the Internet; Symbio won&#39;t be able to access the metadata and therefore will fail on every SAML login attempt.</p>
+<h4 id="configure-user-groups-and-permission-sets">Configure User Groups and Permission Sets</h4>
+<p>The new provider is now live and usable. All users logging in via SAML are made Viewers. As Azure AD does not transmit group claims you need to manage user group assignments manually.</p>
+<p>Create user groups and permission sets as needed.</p>
+<p>After a user has logged in for the first time you can access his data and change is application role, his default permission sets, and his user group memberships (don&#39;t use SAML user groups). As long as SAML group management is deactivated these values won&#39;t be changed automatically.</p>
+</singlesignonservice></entitydescriptor></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/installation-guide/saml-configuration/5_example-aad.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

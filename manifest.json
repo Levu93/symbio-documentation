@@ -1,0 +1,5158 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Repos/symbio-documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/external-systems/media/AddExternalSystemToStorage.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/external-systems/media/AddExternalSystemToStorage.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/external-systems/media/AddedExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/external-systems/media/AddedExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/external-systems/media/ChooseConverterFile.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/external-systems/media/ChooseConverterFile.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/external-systems/media/CreateExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/external-systems/media/CreateExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/external-systems/media/DetailContentExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/external-systems/media/DetailContentExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/external-systems/media/NavigateToStorages.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/external-systems/media/NavigateToStorages.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/external-systems/media/NavigationToExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/external-systems/media/NavigationToExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/external-systems/media/RemoveExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/external-systems/media/RemoveExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/external-systems/media/RemovedExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/external-systems/media/RemovedExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/AdminPanel.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/AdminPanel.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/ChoosingFacetforFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/ChoosingFacetforFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/CreatedFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/CreatedFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/DropDown.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/DropDown.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/ListWidget.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/ListWidget.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/NewFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/NewFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/PictureWidget.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/PictureWidget.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/Result.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/Result.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/SelectProcessForFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/SelectProcessForFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/SelectTheFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/SelectTheFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/SelectedFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/SelectedFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/fact-sheets/media/TextWidget.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/fact-sheets/media/TextWidget.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/stereotypes/media/add-stereotype.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/stereotypes/media/add-stereotype.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/stereotypes/media/navigate-to-stereotypes.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/stereotypes/media/navigate-to-stereotypes.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/stereotypes/media/process-and-sterotype-red.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/stereotypes/media/process-and-sterotype-red.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/stereotypes/media/process-and-sterotype.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/stereotypes/media/process-and-sterotype.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/stereotypes/media/select-desired-process-type.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/stereotypes/media/select-desired-process-type.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/stereotypes/media/stereotype-process.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/stereotypes/media/stereotype-process.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/stereotypes/media/stereotypes-dc-red.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/stereotypes/media/stereotypes-dc-red.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/administration/stereotypes/media/stereotypes-dc.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/administration/stereotypes/media/stereotypes-dc.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/App_Pool.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/App_Pool.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/App_Pool_Advanced.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/App_Pool_Advanced.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/Basic_Claim_Rule_1.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/Basic_Claim_Rule_1.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/Basic_Claim_Rule_2.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/Basic_Claim_Rule_2.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/Bindings.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/Bindings.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/Identity_Provider.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/Identity_Provider.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/Office_Address.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/Office_Address.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/OpenSSL.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/OpenSSL.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/Powershell_Installation.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/Powershell_Installation.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/Reg_Key.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/Reg_Key.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/SAML.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/SAML.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/SAML_Symbio_Settings.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/SAML_Symbio_Settings.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/SQL_CaseSensitive.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/SQL_CaseSensitive.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/SQL_DB_Size.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/SQL_DB_Size.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/User_Groups.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/User_Groups.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/WebConfig.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/WebConfig.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/WebConfig_B.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/WebConfig_B.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/WebConfig_C.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/WebConfig_C.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/WebConfig_D.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/WebConfig_D.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/Web_Page.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/Web_Page.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/add-AppPool-window.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/add-AppPool-window.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/add-website-window.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/add-website-window.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/app-pool-basic-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/app-pool-basic-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/configure-website.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/configure-website.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/iis-windows-features.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/iis-windows-features.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/no-managed-code.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/no-managed-code.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/select-role-services.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/select-role-services.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/installation/media/select-server-roles.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/installation/media/select-server-roles.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/installation-guide/saml-configuration/media/sso-flow.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/installation-guide/saml-configuration/media/sso-flow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/ExtSys_choose.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/ExtSys_choose.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/addsyex1.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/addsyex1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/addsyex2.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/addsyex2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/addsyex3.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/addsyex3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/admin.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/admin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/apply.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/apply.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/connectJiraProject.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/connectJiraProject.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/extSysConfig1.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/extSysConfig1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/extSysConfig2.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/extSysConfig2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/extendedcfg.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/extendedcfg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/atlassian-connector/media/storages.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/atlassian-connector/media/storages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/media/Database.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/media/Database.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/media/Values.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/media/Values.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/media/config-store.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/media/config-store.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/media/external-system.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/media/external-system.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/media/external-systems.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/media/external-systems.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/media/storage-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/media/storage-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/rendering-service/media/SymbioRenderingService_Services.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/rendering-service/media/SymbioRenderingService_Services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/rendering-service/media/SymbioRenderingService_Services_Error1053.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/rendering-service/media/SymbioRenderingService_Services_Error1053.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/RMS_msDir.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/RMS_msDir.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_CreateFolder.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_CreateFolder.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_NewDataSource.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_NewDataSource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_Templates.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_Templates.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_UploadReports.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_UploadReports.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_dorpDir.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_dorpDir.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_msDir.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/SSRS_msDir.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/config-store.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/config-store.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/external-system.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/external-system.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/link-storage-DCConfig.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/link-storage-DCConfig.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/multipleODSmultipleStorages.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/multipleODSmultipleStorages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/reporting-service/media/oneStorageOnODSDB.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/reporting-service/media/oneStorageOnODSDB.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/2019-01-25_09h58_22.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/2019-01-25_09h58_22.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/2019-01-25_10h00_31.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/2019-01-25_10h00_31.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/Cat-SubCat.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/Cat-SubCat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/CreateProcessStepCheckBox.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/CreateProcessStepCheckBox.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/Events.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/Events.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/GatewayAND.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/GatewayAND.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/GatewayOR.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/GatewayOR.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/GatewayXOR.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/GatewayXOR.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/LocalTask.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/LocalTask.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/NestedSubProcessSync.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/NestedSubProcessSync.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/ProcessStepsExample.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/ProcessStepsExample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/Storage.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/Storage.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSolMan1.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSolMan1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSolMan2.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSolMan2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSymbio.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSymbio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/TaskDocument.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/TaskDocument.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/add-dc-to-sub.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/add-dc-to-sub.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/cat-main.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/cat-main.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/cat-sub.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/cat-sub.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/create-document.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/create-document.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/doc-solman.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/doc-solman.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/empty-main.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/empty-main.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/emptySubProcessSolMan.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/emptySubProcessSolMan.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/emptySubProcessSymbio.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/emptySubProcessSymbio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/extConf1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/extConf1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/extConf2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/extConf2.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/extSystem1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/extSystem1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/extSystem2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/extSystem2.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/interfaceSolMan.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/interfaceSolMan.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/interfaceSymbio.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/interfaceSymbio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/main-changed-type.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/main-changed-type.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/main-main-sub.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/main-main-sub.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/main-main.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/main-main.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/main-sub.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/main-sub.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/simple-structure.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/simple-structure.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/solman-structure-simple.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/solman-structure-simple.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/sub-deleted.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/sub-deleted.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan1.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan2.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan3.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSymbio1.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSymbio1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSymbio2.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSymbio2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/synchronization.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/sap-solution-manager-connector/media/synchronization.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/add-website-window.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/add-website-window.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/app-pool-basic-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/app-pool-basic-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/configure-website.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/configure-website.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/iis-windows-features.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/iis-windows-features.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image10.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image11.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image12.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image13.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image14.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image14.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image15.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image15.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image16.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image17.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image17.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image23.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image23.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image24.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image24.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/image9.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/image9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/mermaid.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/mermaid.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/no-managed-code.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/no-managed-code.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/select-role-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/select-role-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/select-server-roles.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/select-server-roles.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/admin/services/unique-id-provider/media/table-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/admin/services/unique-id-provider/media/table-example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/azure/media/automationAccount.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/azure/media/automationAccount.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/azure/media/credentialsArea.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/azure/media/credentialsArea.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/azure/media/dnsName.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/azure/media/dnsName.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/azure/media/inboundPort.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/azure/media/inboundPort.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/azure/media/newRunbook.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/azure/media/newRunbook.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/azure/media/runbook.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/azure/media/runbook.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/azure/media/variablesArea.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/azure/media/variablesArea.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/img/01-Create_Token.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/img/01-Create_Token.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/img/02-Configure_Token.png",
+      "output": {
+        "resource": {
+          "relative_path": "_site/docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/img/02-Configure_Token.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/administration/external-systems/connect-external-systems.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/administration/external-systems/connect-external-systems.html",
+          "hash": "5TAWAmVpO8Pj/guL6h1rXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/administration/external-systems/create-token-and-inform-external-systems.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/administration/external-systems/create-token-and-inform-external-systems.html",
+          "hash": "8QT7haEGmM7AotOsN4SDcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/administration/external-systems/creating-external-systems.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/administration/external-systems/creating-external-systems.html",
+          "hash": "kp+6CVCW5w3MKt1cM+K/hA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/administration/external-systems/disconnect-external-systems.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/administration/external-systems/disconnect-external-systems.html",
+          "hash": "lyFt04NNMtlobMbdx3iRqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/external-systems/media/AddExternalSystemToStorage.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/external-systems/media/AddExternalSystemToStorage.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/external-systems/media/AddedExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/external-systems/media/AddedExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/external-systems/media/ChooseConverterFile.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/external-systems/media/ChooseConverterFile.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/external-systems/media/CreateExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/external-systems/media/CreateExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/external-systems/media/DetailContentExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/external-systems/media/DetailContentExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/external-systems/media/NavigateToStorages.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/external-systems/media/NavigateToStorages.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/external-systems/media/NavigationToExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/external-systems/media/NavigationToExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/external-systems/media/RemoveExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/external-systems/media/RemoveExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/external-systems/media/RemovedExternalSystem.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/external-systems/media/RemovedExternalSystem.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/administration/fact-sheets/creating-factsheets.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/administration/fact-sheets/creating-factsheets.html",
+          "hash": "rnJXtFW7uhPJWBCzTwosBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/AdminPanel.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/AdminPanel.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/ChoosingFacetforFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/ChoosingFacetforFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/CreatedFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/CreatedFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/DropDown.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/DropDown.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/ListWidget.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/ListWidget.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/NewFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/NewFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/PictureWidget.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/PictureWidget.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/Result.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/Result.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/SelectProcessForFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/SelectProcessForFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/SelectTheFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/SelectTheFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/SelectedFactSheet.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/SelectedFactSheet.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/fact-sheets/media/TextWidget.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/fact-sheets/media/TextWidget.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/administration/fact-sheets/use-factsheets.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/administration/fact-sheets/use-factsheets.html",
+          "hash": "Yh/W6qo3xMZuR4xhE1EIYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/administration/stereotypes/creating-stereotypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/administration/stereotypes/creating-stereotypes.html",
+          "hash": "Hq8NVn7JQlYNUewIjfF7Bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/stereotypes/media/add-stereotype.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/stereotypes/media/add-stereotype.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/stereotypes/media/navigate-to-stereotypes.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/stereotypes/media/navigate-to-stereotypes.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/stereotypes/media/process-and-sterotype-red.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/stereotypes/media/process-and-sterotype-red.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/stereotypes/media/process-and-sterotype.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/stereotypes/media/process-and-sterotype.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/stereotypes/media/select-desired-process-type.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/stereotypes/media/select-desired-process-type.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/stereotypes/media/stereotype-process.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/stereotypes/media/stereotype-process.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/stereotypes/media/stereotypes-dc-red.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/stereotypes/media/stereotypes-dc-red.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/administration/stereotypes/media/stereotypes-dc.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/administration/stereotypes/media/stereotypes-dc.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/administration/stereotypes/use-stereotypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/administration/stereotypes/use-stereotypes.html",
+          "hash": "T3Eqq6kPvfG/cjyhh/lY2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/index.html",
+          "hash": "7jQAfd1QBIbi6W07Syu/Mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/Additional-information.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/Additional-information.html",
+          "hash": "xhB2WXKMuN9/ofxguw/Gkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/Finishing.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/Finishing.html",
+          "hash": "5kOvWRjfMkSw/2bPzmAUaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/IIS-Installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/IIS-Installation.html",
+          "hash": "DVEK7Nztmc5Ut4RkqIWPXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/Installation-Manual.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/Installation-Manual.html",
+          "hash": "XUgcFEL/Q9pCDzcREDS8ZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/Installation-Skripted.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/Installation-Skripted.html",
+          "hash": "l3ZDMH30+Y6vz/VpnFpPpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/Requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/Requirements.html",
+          "hash": "b0elxVN/Pn7qA3z3ATSBhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/SAML-Requirements-IdP.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/SAML-Requirements-IdP.html",
+          "hash": "SxqSXEXHDtkgOEMB88yrzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/SAML-Symbio-Web-settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/SAML-Symbio-Web-settings.html",
+          "hash": "RxAD+xv2y6K2QipyETAABA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/SQL-Server-Installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/SQL-Server-Installation.html",
+          "hash": "e3tMJKGAd+6+7w+b3/wxbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/Signing-requests-to-IdP.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/Signing-requests-to-IdP.html",
+          "hash": "7b0Ghuvp3NaQVJeMSGidwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/configuration.html",
+          "hash": "Lb4Ez/QvVLHbIvWQ8FMibw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/installation/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/installation/installation.html",
+          "hash": "6G/aLdT5DYon2jP0M7sRmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/App_Pool.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/App_Pool.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/App_Pool_Advanced.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/App_Pool_Advanced.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/Basic_Claim_Rule_1.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/Basic_Claim_Rule_1.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/Basic_Claim_Rule_2.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/Basic_Claim_Rule_2.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/Bindings.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/Bindings.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/Identity_Provider.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/Identity_Provider.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/Office_Address.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/Office_Address.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/OpenSSL.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/OpenSSL.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/Powershell_Installation.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/Powershell_Installation.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/Reg_Key.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/Reg_Key.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/SAML.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/SAML.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/SAML_Symbio_Settings.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/SAML_Symbio_Settings.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/SQL_CaseSensitive.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/SQL_CaseSensitive.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/SQL_DB_Size.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/SQL_DB_Size.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/User_Groups.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/User_Groups.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/WebConfig.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/WebConfig.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/WebConfig_B.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/WebConfig_B.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/WebConfig_C.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/WebConfig_C.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/WebConfig_D.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/WebConfig_D.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/Web_Page.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/Web_Page.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/add-AppPool-window.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/add-AppPool-window.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/add-website-window.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/add-website-window.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/app-pool-basic-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/app-pool-basic-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/configure-website.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/configure-website.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/iis-windows-features.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/iis-windows-features.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/no-managed-code.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/no-managed-code.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/select-role-services.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/select-role-services.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/installation/media/select-server-roles.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/installation/media/select-server-roles.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/saml-configuration/1_introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/saml-configuration/1_introduction.html",
+          "hash": "O1Wb2/wpUKc1YQDcuwALSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/saml-configuration/2_setting-up-saml.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/saml-configuration/2_setting-up-saml.html",
+          "hash": "nzjoGDUKz/pqx6sps4Wz+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/saml-configuration/3_user-rights-management.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/saml-configuration/3_user-rights-management.html",
+          "hash": "6FbE/qG0ShJ16FjJXdPCJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/saml-configuration/4_example-adfs.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/saml-configuration/4_example-adfs.html",
+          "hash": "TwESFE54ri/i6lAKKPZ9IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/saml-configuration/5_example-aad.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/saml-configuration/5_example-aad.html",
+          "hash": "KaNC27KWQ5xBvWPMYkcNmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/installation-guide/saml-configuration/6_checklist.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/installation-guide/saml-configuration/6_checklist.html",
+          "hash": "Rw17SRqsbARPJPiA150YZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/installation-guide/saml-configuration/media/sso-flow.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/installation-guide/saml-configuration/media/sso-flow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/atlassian-connector.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/atlassian-connector.html",
+          "hash": "nODHcCIT2pNrEbvwMBndmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/atlassian-connector/installation_guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/atlassian-connector/installation_guide.html",
+          "hash": "tn3FvFJpv/Cbtw4+BBouig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/ExtSys_choose.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/ExtSys_choose.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/addsyex1.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/addsyex1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/addsyex2.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/addsyex2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/addsyex3.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/addsyex3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/admin.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/admin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/apply.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/apply.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/connectJiraProject.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/connectJiraProject.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/extSysConfig1.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/extSysConfig1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/extSysConfig2.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/extSysConfig2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/extendedcfg.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/extendedcfg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/atlassian-connector/media/storages.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/atlassian-connector/media/storages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/atlassian-connector/using_symbioatlassian.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/atlassian-connector/using_symbioatlassian.html",
+          "hash": "CKMR1RGN96fMS1MLlLfwOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/intrafind-connector.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/intrafind-connector.html",
+          "hash": "gBqoBn/tbDaaACIHWw995Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/intrafind-indexer/configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/intrafind-indexer/configuration.html",
+          "hash": "aPu0McMJR/GoPv5/w7uqKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/intrafind-indexer/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/intrafind-indexer/installation.html",
+          "hash": "Nd32+ExucZrOAY+3/ukwHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/intrafind-search-proxy/configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/intrafind-search-proxy/configuration.html",
+          "hash": "paomM9no1NYAuRocm6VSHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/intrafind-search-proxy/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/intrafind-search-proxy/installation.html",
+          "hash": "1fpkdTTSi00j32RewGY2ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/media/Database.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/media/Database.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/media/Values.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/media/Values.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/media/config-store.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/media/config-store.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/media/external-system.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/media/external-system.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/media/external-systems.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/media/external-systems.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/media/storage-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/media/storage-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/rendering-service/deinstallation-manual.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/rendering-service/deinstallation-manual.html",
+          "hash": "MYGrD6H8EtKaomaMU/ZteA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/rendering-service/install-intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/rendering-service/install-intro.html",
+          "hash": "SFvBKem/2K4eap7/n1cOAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/rendering-service/installation-manual.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/rendering-service/installation-manual.html",
+          "hash": "v83TErEvRgciHA3ORoTGJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/rendering-service/installation-scripted.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/rendering-service/installation-scripted.html",
+          "hash": "U3B1oCQSjUXDYaZF8u5Myw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/rendering-service/media/SymbioRenderingService_Services.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/rendering-service/media/SymbioRenderingService_Services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/rendering-service/media/SymbioRenderingService_Services_Error1053.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/rendering-service/media/SymbioRenderingService_Services_Error1053.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/rendering-service/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/rendering-service/troubleshooting.html",
+          "hash": "l0uRRi+LCHt6oUqIxtG1ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/rendering-service/verification.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/rendering-service/verification.html",
+          "hash": "ReOyocS1FcYcwzBSfncPeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/reporting-service/RMSconfiguration.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/reporting-service/RMSconfiguration.html",
+          "hash": "J3C+vSO2mXCo4w0YAwBkBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/reporting-service/SSRSDeployReports.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/reporting-service/SSRSDeployReports.html",
+          "hash": "psLKyt0GJ9rnD0n5htbqxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/reporting-service/configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/reporting-service/configuration.html",
+          "hash": "rWHnPfrTFEY2GzfJRyj2gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/reporting-service/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/reporting-service/installation.html",
+          "hash": "bxKI6VMZ/rakJbIdm4bwYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/RMS_msDir.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/RMS_msDir.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/SSRS_CreateFolder.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/SSRS_CreateFolder.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/SSRS_NewDataSource.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/SSRS_NewDataSource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/SSRS_Templates.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/SSRS_Templates.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/SSRS_UploadReports.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/SSRS_UploadReports.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/SSRS_dorpDir.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/SSRS_dorpDir.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/SSRS_msDir.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/SSRS_msDir.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/config-store.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/config-store.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/external-system.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/external-system.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/link-storage-DCConfig.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/link-storage-DCConfig.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/multipleODSmultipleStorages.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/multipleODSmultipleStorages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/reporting-service/media/oneStorageOnODSDB.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/reporting-service/media/oneStorageOnODSDB.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/reporting-service/preliminaries.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/reporting-service/preliminaries.html",
+          "hash": "Mo60Xc4smKtLRX2NPH9aKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/reporting-service/rms-install-manual.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/reporting-service/rms-install-manual.html",
+          "hash": "2ePimXGAnIMnIZuK2aoBjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/reporting-service/rms-install-scripted.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/reporting-service/rms-install-scripted.html",
+          "hash": "jg3Z+ol/vIuGLL9PG8tdKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/reporting-service/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/reporting-service/troubleshooting.html",
+          "hash": "cRfDJmhK5QmsK2YZ1A+iTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector.html",
+          "hash": "Nl6MuQtYicCA+Coql61sBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/SolmanInterfaceSetUpGuide.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/SolmanInterfaceSetUpGuide.html",
+          "hash": "m4afjUgaVV6GBm1AgLVvqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/SubProcessDiagramElementSync.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/SubProcessDiagramElementSync.html",
+          "hash": "VUb5BoA1zA2QRP7FGBZrQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/SymbioToSolManDiagramSynchronization.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/SymbioToSolManDiagramSynchronization.html",
+          "hash": "X0H4c4fONBHJPzDsThweyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/SymbioToSolMansynchronization.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/SymbioToSolMansynchronization.html",
+          "hash": "Y4T5VI8RNMU2kpXeO3vhKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/2019-01-25_09h58_22.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/2019-01-25_09h58_22.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/2019-01-25_10h00_31.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/2019-01-25_10h00_31.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/Cat-SubCat.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/Cat-SubCat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/CreateProcessStepCheckBox.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/CreateProcessStepCheckBox.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/Events.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/Events.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/GatewayAND.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/GatewayAND.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/GatewayOR.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/GatewayOR.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/GatewayXOR.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/GatewayXOR.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/LocalTask.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/LocalTask.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/NestedSubProcessSync.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/NestedSubProcessSync.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/ProcessStepsExample.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/ProcessStepsExample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/Storage.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/Storage.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSolMan1.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSolMan1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSolMan2.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSolMan2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSymbio.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/SubProcessReferenceSymbio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/TaskDocument.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/TaskDocument.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/add-dc-to-sub.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/add-dc-to-sub.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/cat-main.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/cat-main.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/cat-sub.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/cat-sub.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/create-document.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/create-document.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/doc-solman.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/doc-solman.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/empty-main.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/empty-main.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/emptySubProcessSolMan.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/emptySubProcessSolMan.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/emptySubProcessSymbio.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/emptySubProcessSymbio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/extConf1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/extConf1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/extConf2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/extConf2.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/extSystem1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/extSystem1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/extSystem2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/extSystem2.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/interfaceSolMan.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/interfaceSolMan.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/interfaceSymbio.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/interfaceSymbio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/main-changed-type.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/main-changed-type.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/main-main-sub.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/main-main-sub.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/main-main.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/main-main.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/main-sub.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/main-sub.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/simple-structure.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/simple-structure.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/solman-structure-simple.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/solman-structure-simple.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/sub-deleted.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/sub-deleted.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan1.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan2.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan3.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSolMan3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSymbio1.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSymbio1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSymbio2.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/subProcessNestedSymbio2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/sap-solution-manager-connector/media/synchronization.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/sap-solution-manager-connector/media/synchronization.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/svg-to-image-converter.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/svg-to-image-converter.html",
+          "hash": "lHZChdFL6+sQ2TDxH4njOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider.html",
+          "hash": "JEQfYzYEU5yDpLw9MGaN1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/config-before-start.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/config-before-start.html",
+          "hash": "PeS2U2ln2YCtuq95NR7VIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/config-create-provider.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/config-create-provider.html",
+          "hash": "a7ub0RFY7DvLZz63G+Wm5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/config-provider-config.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/config-provider-config.html",
+          "hash": "IwArgrtA4xf00SVmRyS8jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/install-conditions.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/install-conditions.html",
+          "hash": "pOihofCZEKw7/X+hDu3R2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/install-create-token.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/install-create-token.html",
+          "hash": "zNU7zRzeapwHy1ke2dPfRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/install-gotchas.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/install-gotchas.html",
+          "hash": "MGSVABDJnvuH60VyZSUdrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/install-intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/install-intro.html",
+          "hash": "tpFnqZ7zO1+4lvvQ7VrbIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/install-manual.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/install-manual.html",
+          "hash": "FZ4/twd2IcjCUnZBkD7dcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/install-scripted.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/install-scripted.html",
+          "hash": "3fSPpdh1PBPgluzXXdEv5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/unique-id-provider/manual-how-to-use.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/unique-id-provider/manual-how-to-use.html",
+          "hash": "NfmpW1v/fM5J7yc7cNarTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/add-website-window.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/add-website-window.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/app-pool-basic-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/app-pool-basic-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/configure-website.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/configure-website.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/iis-windows-features.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/iis-windows-features.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image10.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image11.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image12.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image13.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image14.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image14.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image15.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image15.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image16.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image17.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image17.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image23.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image23.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image24.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image24.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/image9.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/image9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/mermaid.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/mermaid.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/no-managed-code.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/no-managed-code.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/select-role-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/select-role-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/select-server-roles.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/select-server-roles.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/admin/services/unique-id-provider/media/table-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/admin/services/unique-id-provider/media/table-example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/admin/services/web-jobs-scheduler.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/services/web-jobs-scheduler.html",
+          "hash": "6XqNxCnaXDOlrfbbP+nJBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/admin/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/admin/toc.html",
+          "hash": "wLVeCmebjqHwqWPv/S9B+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/azure/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/azure/index.html",
+          "hash": "RcePpUsu19zN47AnX+lptQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/azure/media/automationAccount.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/azure/media/automationAccount.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/azure/media/credentialsArea.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/azure/media/credentialsArea.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/azure/media/dnsName.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/azure/media/dnsName.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/azure/media/inboundPort.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/azure/media/inboundPort.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/azure/media/newRunbook.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/azure/media/newRunbook.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/azure/media/runbook.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/azure/media/runbook.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/azure/media/variablesArea.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/azure/media/variablesArea.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/azure/runbooks.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/azure/runbooks.html",
+          "hash": "hnBIV1wEuRTnTA3xyQfNDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/azure/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/azure/toc.html",
+          "hash": "Y9uayw/rU0O5A8++GkOEhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/event-grid.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/event-grid.html",
+          "hash": "POs1EtrKb18oDiQhh8GaJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/getting-started.html",
+          "hash": "mHt03Q3A31j08Ql+4hMRFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/index.html",
+          "hash": "wrU9TojmL7r95vyG/Rh9bg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/how-to/error.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/how-to/error.html",
+          "hash": "MJazkq9AOJmTQ5dJV77GAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/how-to/filter.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/how-to/filter.html",
+          "hash": "Vj5XlqLM2GO1g4mf0j6Isw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/how-to/quickstart-mainprocesses/quickstart-mainprocesses.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/how-to/quickstart-mainprocesses/quickstart-mainprocesses.html",
+          "hash": "9lXhoL0ZhLe45C/uFZQG/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/img/01-Create_Token.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/img/01-Create_Token.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/img/02-Configure_Token.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/img/02-Configure_Token.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/rest-symbio-auth-token-client-temp-example-documentation.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/rest-symbio-auth-token-client-temp-example-documentation.html",
+          "hash": "K7UuU584gBWck20c42/WDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/attributes-get.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/attributes-get.html",
+          "hash": "018hQmU24ktBhf54IAf4XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/attributes-list.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/attributes-list.html",
+          "hash": "LEPgq1nDTe635eFFYWYhcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/attributes.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/attributes.html",
+          "hash": "FZn8AyTc4eQvv1xlO002dQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/children.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/children.html",
+          "hash": "MVoIdwZUUFmxa9biPKogNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/config.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/config.html",
+          "hash": "H09eDcgkT9KJoQn65+9eXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/content.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/content.html",
+          "hash": "2bdbw+VFT3RG3zvqX48w7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/elements-get.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/elements-get.html",
+          "hash": "/Bt6zlEnkI5oA+cJSfj1Hw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/elements-list.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/elements-list.html",
+          "hash": "dO52tcLXFWn1OXEVOVzm6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/elements.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/elements.html",
+          "hash": "KcJi6eZrSHToSKkkOA0H5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/elementsinfo-get.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/elementsinfo-get.html",
+          "hash": "xEJh84b6qR5GaQFD2M7tpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/facets.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/facets.html",
+          "hash": "uXgGA3zzLYfxz23+l2eSBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/info.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/info.html",
+          "hash": "AePGqOlBlOimR8Mn/91nyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/models/element.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/models/element.html",
+          "hash": "DlR9NBvNQ5Hn/vdTFCiF+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/models/error.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/models/error.html",
+          "hash": "UbCnWu3mwgHQ+XxdzCgpAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/models/facet.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/models/facet.html",
+          "hash": "frbIkr8QZzPdFlnzBGYvTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/models/operationresulttype.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/models/operationresulttype.html",
+          "hash": "2Bx+4rvOV5JIaeUyP6R41w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/models/transition.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/models/transition.html",
+          "hash": "MDYcwhz4cf6QcBvSIuVkrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/models/type.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/models/type.html",
+          "hash": "flNjgd8QI1N1XtHZUD0lAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/models/view.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/models/view.html",
+          "hash": "rO/ctgKH2CuVF2KppLPk4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/related-get.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/related-get.html",
+          "hash": "vBHBhAoKUIx1bC2vo9kIaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/related-list.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/related-list.html",
+          "hash": "PB60MMSs59mmONs/qZPORw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/related.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/related.html",
+          "hash": "2wabvtR233KV4rdGGRJrgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/release-change-state.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/release-change-state.html",
+          "hash": "6iZ2P11uzl3EmqJoFoh7/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/release-create-version.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/release-create-version.html",
+          "hash": "JYxHBx9SM3JGtniC1FN2jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/release-transitions.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/release-transitions.html",
+          "hash": "OT8YAHUjfi5tM/0sSkGJAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/release.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/release.html",
+          "hash": "kRRbVO4aiqkzZ2kCX659zQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/rest-api/reference/views.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/rest-api/reference/views.html",
+          "hash": "nqc9fIwWRJjRG1M8XbXqxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/services/external-system-types.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/services/external-system-types.html",
+          "hash": "yIzrIX8K9WwoXRtIBcjTUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/developer/services/external-systems.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/services/external-systems.html",
+          "hash": "QfV/Z0KacXewWchKre1taQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/developer/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/developer/toc.html",
+          "hash": "/XfpEFPR6x+J+6jR4SJRaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/articles.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/articles.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pz_logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pz_logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/reference.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/reference.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/symbio_logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/symbio_logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "G1mVokpGg3dYmhaFoy4Elw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "MpCob1PyUuECBlS2COrCWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 106,
+          "skipped_file_count": 106
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installation ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="installation">Installation</h1>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>OS-Version: Windows Server 2012 or higher</li>
+<li>IIS-Version: 7.5 or higher</li>
+<li>SQL-Server-Version: 2016 or higher</li>
+<li>.NET Core Version: 2.1.4 or higher</li>
+<li>.NET Core Windows Server Hosting-Version: 2.1.4 or higher</li>
+<li>Processors: 4 or higher</li>
+<li>Memory: 4 or higher</li>
+</ul>
+<h3 id="additional-requirements">Additional requirements</h3>
+<ul>
+<li>The Intrafind SearchProxy (IFSP) user set up in/for IIS has to own appropriate rights to access its files and the SQL database</li>
+</ul>
+<h2 id="manual-installation">Manual Installation</h2>
+<h3 id="setting-up-a-new-site-on-iis">Setting up a new site on IIS</h3>
+<ol>
+<li>Download and install <a href="https://www.microsoft.com/net/download/dotnet-core/2.1">.NET Core Windows Server Hosting</a>  (2.1.4 or later)</li>
+<li>Download the IFSP artifact or ask Symbio support for the IFSP package</li>
+<li>Extract it to the installation folder of the service</li>
+<li>Create a new site in IIS (bindings depending on you infrastructure)</li>
+<li>Adjust the AppPool Basic Settings: No Managed Code</li>
+</ol>
+<h3 id="setting-up-an-sql-database">Setting up an SQL database</h3>
+<ol>
+<li>Create a database on your SQL Server to hold the IFSP configuration data, e.g. &quot;SqlServerConfigStore&quot;</li>
+<li>Create an SQL login with owner rights for the created database</li>
+<li>Set the correct SQL connection string to the created database in IFSP&#39;s appsettings.json</li>
+<li>Set TrustServerCertificate=True in the connection string if you are using a self-signed or no certificate</li>
+</ol>
+<h2 id="scripted-installation">Scripted Installation</h2>
+<h3 id="preparations">Preparations</h3>
+<ul>
+<li>Ensure Powershell Version 5.0 or higher is available. Download <a href="https://www.microsoft.com/en-us/download/details.aspx?id=50395">WMF 5.0</a></li>
+<li>Download and install <a href="https://www.microsoft.com/net/download/dotnet-core/2.1">.NET Core Windows Server Hosting Package</a> (2.1.4 or later)</li>
+<li>Download the Install.ps1 file from the <a href="http://operations.symbioworld.com/">Operations Page</a>.</li>
+<li>Download the symbio-service-searchproxy-intrafind.parameters.json file from the <a href="http://operations.symbioworld.com/">Operations Page</a>.</li>
+<li>Ensure a database for configuration information is available (see <em>Setting up an SQL database</em> above)</li>
+</ul>
+<h3 id="edit-the-parametersjson-file">Edit the Parameters.json file</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SourcePath</td>
+<td>The download or local path of the installation package (zip file).</td>
+</tr>
+<tr>
+<td>BaseTargetPath</td>
+<td>The local root directory path for IIS websites</td>
+</tr>
+<tr>
+<td>BaseBackupPath</td>
+<td>The local directory path to backup your existing service</td>
+</tr>
+<tr>
+<td>InstanceName</td>
+<td>The name of the main instalations directory</td>
+</tr>
+<tr>
+<td>IISSettings.Enabled</td>
+<td><em>true</em>, if an IIS website should be created, otherwise <em>false</em>.</td>
+</tr>
+<tr>
+<td>IISSettings.SiteName</td>
+<td>The name of the IIS Website.</td>
+</tr>
+<tr>
+<td>IISSettings.ManagedRuntimeVersion</td>
+<td>The managed runtime version. This value should not be changed. Leave the value empty (no managed runtime).</td>
+</tr>
+<tr>
+<td>IISSettings.IdentityType</td>
+<td>The <a href="https://docs.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/processmodel">identity type</a>.</td>
+</tr>
+<tr>
+<td>IISSettings.ApplicationName</td>
+<td>The name of the IIS application if applicable.</td>
+</tr>
+<tr>
+<td>IISSettings.ApplicationPoolName</td>
+<td>The name of application pool.</td>
+</tr>
+<tr>
+<td>IISSettings.ApplicationPoolUser</td>
+<td>The name of the domain user, with rights to access the SQL database; it will be used as the service identity.</td>
+</tr>
+<tr>
+<td>IISSettings.ApplicationPoolPassword</td>
+<td>The password of the specified application pool user. If no password is given and the IdentityType is set to 3, the script will prompt for the password during installation.</td>
+</tr>
+<tr>
+<td>IISSettings.Bindings</td>
+<td>List of bindings</td>
+</tr>
+<tr>
+<td>IISSettings.Bindings.Protocol</td>
+<td>The protocol contains <em>http</em> or <em>https</em></td>
+</tr>
+<tr>
+<td>IISSettings.Bindings.IPAddress</td>
+<td>The IP address to use. Default is * for all IP addresses.</td>
+</tr>
+<tr>
+<td>IISSettings.Bindings.Port</td>
+<td>The port is an integer. The default port for <em>http</em> is 80 and for <em>https</em> 443.</td>
+</tr>
+<tr>
+<td>IISSettings.Bindings.HostName</td>
+<td>The hostname for the binding. Use * for all hostnames.</td>
+</tr>
+<tr>
+<td>IISSettings.Bindings.CertificateHash</td>
+<td>The thumbprint hash of the certificate you want to use. (<a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate">This is how you get the fingerprint.</a>) This parameter is optional if you maintain the CertificateCN.</td>
+</tr>
+<tr>
+<td>IISSettings.Bindings.CertificateCN</td>
+<td>The CN of the certificate. This can be found in the details of the certificate as field <code>Subject</code>.</td>
+</tr>
+<tr>
+<td>IISSettings.Bindings.SslFlag</td>
+<td>The optional parameter SslFlag is responsible for activating SNI in the binding. Set 1 to activate SNI (<a href="https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-server-name-indication-sni-ssl-scalability">What is SNI?</a>).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="appsettings">AppSettings</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[SERVER]</td>
+<td>Name or address (including the port) of your database server</td>
+</tr>
+<tr>
+<td>[CONFIG-DB]</td>
+<td>The name of your configuration database</td>
+</tr>
+<tr>
+<td>[CONFIG-TABLE-NAME]</td>
+<td>The name of the (already existing) configuration table</td>
+</tr>
+</tbody>
+</table>
+<h3 id="running-the-script">Running the Script</h3>
+<p>If all settings are corretly set, please start a new powershell console as Administrator, change into the directory of the downloaded script, and run the following command:</p>
+<pre><code class="lang-PowerShell">.\Install.ps1 -ParametersFile .\symbio-service-searchproxy-intrafind.parameters.json
+</code></pre><p><em><code>nice to know</code></em></p>
+<p><em>- If you use a domain user. You must write [server]\[user].</em></p>
+<p><em>- You can omit the specification of the Files parameter by renaming symbio-service-searchproxy-intrafind.parameters.json to parameter.json. The script detects the JSON itself, if they are in the same folder.</em></p>
+<p><em>- If you already operate a fully configured IIS on the target machine, you can use the switch <code>-WithoutIIS</code>. This turns off the checking and installation of the IIS components.
+This is only recommended if you have already executed the script at least once with a successful IIS configuration.</em></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>You have now set up the IFSP. The next step is configuring it in Symbio.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/services/intrafind-search-proxy/installation.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

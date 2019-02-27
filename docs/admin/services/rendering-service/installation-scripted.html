@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Scripted Installation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Scripted Installation ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="scripted-installation">Scripted Installation</h1>
+
+<h2 id="requirement">Requirement</h2>
+<ul>
+<li>Powershell Version 5.0 or higher. Download <a href="https://www.microsoft.com/en-us/download/details.aspx?id=50395">WMF 5.0</a></li>
+<li>Download the <strong>Install.ps1</strong> file from the <a href="http://operations.symbioworld.com/">Operations Page</a>.</li>
+<li>Download the <strong>symbio-service-rendering.parameters.json</strong> file from the <a href="http://operations.symbioworld.com/">Operations Page</a>.</li>
+<li>Open and edit the symbio-service-rendering.parameters.json file.</li>
+</ul>
+<p>Replace the settings with your own values:</p>
+<h3 id="parameters">Parameters:</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SourcePath</td>
+<td>The download or local path of the installation package (zip file).</td>
+</tr>
+<tr>
+<td><a name="TargetPath"></a>TargetPath</td>
+<td>The local directory for the Service</td>
+</tr>
+<tr>
+<td>NetFrameworkPath</td>
+<td>The download or local path of the NetFramework installation package (exe).</td>
+</tr>
+<tr>
+<td>ServiceSettinigs.ApplicationName</td>
+<td>The name of your application which should be run as a Windows service, e.g. Service.exe</td>
+</tr>
+<tr>
+<td>ServiceSettinigs.ServiceName</td>
+<td>The name with which the service is registered</td>
+</tr>
+<tr>
+<td>ServiceSettinigs.AppConfig</td>
+<td>The XML node for the AppConfig. Adjust the target urls and the service name so that they are the same as your binding</td>
+</tr>
+<tr>
+<td>ServiceSettinigs.Bindings</td>
+<td>List of bindings</td>
+</tr>
+<tr>
+<td>ServiceSettinigs.Bindings.Protocol</td>
+<td>The HTTP protocol. Only <em>https</em> is supported</td>
+</tr>
+<tr>
+<td>ServiceSettinigs.Bindings.Port</td>
+<td>The port is an integer. The default port for <em>https</em> is 443</td>
+</tr>
+<tr>
+<td>ServiceSettinigs.Bindings.HostName</td>
+<td>The hostname for the binding.</td>
+</tr>
+<tr>
+<td>ServiceSettinigs.Bindings.CertificateHash</td>
+<td>The thumbprint hash of the certificate you want to use. (<a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate">This is how you get the fingerprint.</a>)</td>
+</tr>
+<tr>
+<td>ServiceSettinigs.Bindings.HostUser</td>
+<td>The hostuser for the binding. This can be a domain user (DOMAIN/User) or use &#39;everyone&#39; for unknown users</td>
+</tr>
+</tbody>
+</table>
+<p>If all settings are corretly set, please start a new powershell console as administrator, change into the directory of the downloaded script, and run the following command:</p>
+<pre><code class="lang-PowerShell">.\Install.ps1 -ParametersFile .\symbio-service-rendering.parameters.json
+</code></pre><p><em><code>nice to know</code></em></p>
+<p><em>- You can omit the specification of the Files parameter by renaming symbio-service-rendering.parameters.json to parameter.json. The script detects the JSON itself, if they are in the same folder.</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/services/rendering-service/installation-scripted.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

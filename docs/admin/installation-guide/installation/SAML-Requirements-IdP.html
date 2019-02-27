@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SAML: Requirements for the Identity Provider </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SAML: Requirements for the Identity Provider ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="saml-requirements-for-the-identity-provider">SAML: Requirements for the Identity Provider</h1>
+
+<h2 id="active-directory-ad-link-via-saml-20">Active Directory (AD) link via SAML 2.0</h2>
+<p>The following chapter explains the synchronization of Active Directory users and groups. Synchronized users are not shown a login dialogue.</p>
+<p>In Symbio Web Active Directory user can be linked via SAML 2.0 so they can log onto Symbio Web with their Windows user accounts without having to set up users manually in the Symbio Web user settings.</p>
+<p>For the configuration settings in Symbio Web als well as in the <a href="https://technet.microsoft.com/en-us/windowsserver/dd448613.aspx">Active Directory Federation Services</a> on your Ative Directory-Server have to be adjusted.</p>
+<p>The identity provider makes it possible for Symbio users to log in with authentication information provided by the identity provide:</p>
+<ul>
+<li>Symbio is the Service Provider here.</li>
+<li>Identity Provider can be Active Directory Federation Services, for example.</li>
+<li>Symbio authenticates against the identity provider via the browser, so identity provider and Symbio Web cannot access each other.</li>
+</ul>
+<p>Communication takes place via the browser, which has access to both networks.</p>
+<p>The following picture shows the authentication process:</p>
+<p> <img src="media/SAML.jpg" alt="SAML"></p>
+<h2 id="claims">Claims</h2>
+<p>The following information is needed:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Title</strong></th>
+<th><strong>Definition of content</strong></th>
+<th><strong>Necessary</strong></th>
+<th><strong>Claim Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Name of user</td>
+<td>Yes</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name</a></td>
+</tr>
+<tr>
+<td>UPN</td>
+<td>Attributes of clear content</td>
+<td>Yes</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn</a></td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td>Last name of user</td>
+<td>Yes</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</a></td>
+</tr>
+<tr>
+<td>First Name</td>
+<td>First name of user</td>
+<td>Yes</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</a></td>
+</tr>
+<tr>
+<td>E-Mail</td>
+<td>E-Mail address of user</td>
+<td>Yes</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</a></td>
+</tr>
+<tr>
+<td>Group</td>
+<td>Group claims (One Claim with type per group, only necessary for assigning administrators)</td>
+<td>Optional</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/group">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/group</a></td>
+</tr>
+<tr>
+<td>Office Address</td>
+<td>Office address of user</td>
+<td>No</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/streetaddress">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/streetaddress</a></td>
+</tr>
+<tr>
+<td>Office ZIP</td>
+<td>Office ZIP of user</td>
+<td>No</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/postalcode">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/postalcode</a></td>
+</tr>
+<tr>
+<td>Office Country</td>
+<td>Office country of user</td>
+<td>No</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country</a></td>
+</tr>
+<tr>
+<td>Private Telephone number</td>
+<td>Private telephone number of user</td>
+<td>No</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/homephone">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/homephone</a></td>
+</tr>
+<tr>
+<td>Business Telephone number</td>
+<td>Business telephone number of user</td>
+<td>No</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/otherphone">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/otherphone</a></td>
+</tr>
+<tr>
+<td>Date of birth</td>
+<td>Date of birth of user</td>
+<td>No</td>
+<td><a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/dateofbirth">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/dateofbirth</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="with-access-to-symbio-web">With access to Symbio Web</h3>
+<p>If you already have access to Symbio Web you can download the meta data directly in Symbio Web.</p>
+<p>If your storage address is <a href="https://sample.symbioweb.com/storagecollection/storage">https://sample.symbioweb.com/storagecollection/storage</a> please call up the following URL</p>
+<p><a href="https://sample.symbioweb.com/storagecollection/storage/Master/viewer/1031/Public/ServiceProviderFederationMetadata">https://sample.symbioweb.com/storagecollection/storage/Master/viewer/1031/Public/ServiceProviderFederationMetadata</a>, in order to get the meta data for Symbio Web as Service Provider.</p>
+<h3 id="without-access-to-symbio-web">Without access to Symbio Web</h3>
+<p> In this case the XML file withe meta data for Symbio Web has to be generated as follows</p>
+<pre><code class="lang-xml">&lt;md:EntityDescriptor xmlns:md=&quot;urn:oasis:names:tc:SAML:2.0:metadata&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:2.0:assertion&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot; entityID=&quot;http://symbioworld.com/web&quot;&gt;
+
+&lt;!-- insert ds:Signature element --&gt;
+
+    &lt;md:SPSSODescriptor AuthnRequestsSigned=&quot;false&quot; WantAssertionsSigned=&quot;true&quot; protocolSupportEnumeration=&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;&gt;
+        &lt;md:KeyDescriptor use=&quot;signing&quot;&gt;
+            &lt;ds:KeyInfo&gt;
+                &lt;ds:X509Data&gt;
+                    &lt;ds:X509Certificate&gt;                   MIIFFTCCA/2gAwIBAgIMD4M0XYx9yvHdeWJkMA0GCSqGSIb3DQEBCwUAMFoxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMTAwLgYDVQQDEydHbG9iYWxTaWduIENvZGVTaWduaW5nIENBIC0gU0hBMjU2IC0gRzIwHhcNMTYwNjEwMTIwOTA2WhcNMTgwNzEzMTQxMDEzWjCBjzELMAkGA1UEBhMCREUxDzANBgNVBAgTBkJheWVybjERMA8GA1UEBxMIQXNjaGhlaW0xHTAbBgNVBAoTFFBsb2V0eiArIFplbGxlciBHbWJIMR0wGwYDVQQDExRQbG9ldHogKyBaZWxsZXIgR21iSDEeMBwGCSqGSIb3DQEJARYPaW5mb0BwLXVuZC16LmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAukQ+V/tNuElc0qWEaiMEedhTJmx7VsBs6/st74vnbhntK0XxW3oiBMoPDGZkcXHKCiVAIBfNNQvxeSTcZpzUcwf5r1lor8lXoAQTrJNArxe69nLKkjva2+3Ugfo0JgT+C9G197GuJFdqOYW58QMiO2i2TeenCVffotkNm1uPSLtISz3nYW3D1W1hGpTn/90u89vRedT/mVNfB3kvS6HBRFbakA1UvFdEjlnGbN/AhjgEx97v5LquictZy+xUpQ2OuOF6f5ZYuCFa3t4vEfOMOSTNEqNQYrvbJp9Uh5mDlv1L2uRRIRhy38XgN5824mSvVJMbzmLeA6MpQQ+YSC+hnwIDAQABo4IBozCCAZ8wDgYDVR0PAQH/BAQDAgeAMIGQBggrBgEFBQcBAQSBgzCBgDBEBggrBgEFBQcwAoY4aHR0cDovL3NlY3VyZS5nbG9iYWxzaWduLmNvbS9jYWNlcnQvZ3Njb2Rlc2lnbnNoYTJnMi5jcnQwOAYIKwYBBQUHMAGGLGh0dHA6Ly9vY3NwMi5nbG9iYWxzaWduLmNvbS9nc2NvZGVzaWduc2hhMmcyMFYGA1UdIARPME0wQQYJKwYBBAGgMgEyMDQwMgYIKwYBBQUHAgEWJmh0dHBzOi8vd3d3Lmdsb2JhbHNpZ24uY29tL3JlcG9zaXRvcnkvMAgGBmeBDAEEATAJBgNVHRMEAjAAMEIGA1UdHwQ7MDkwN6A1oDOGMWh0dHA6Ly9jcmwuZ2xvYmFsc2lnbi5jb20vZ3MvZ3Njb2Rlc2lnbnNoYTJnMi5jcmwwEwYDVR0lBAwwCgYIKwYBBQUHAwMwHQYDVR0OBBYEFKE6dalLVKEktsj83r4Dw359M0d3MB8GA1UdIwQYMBaAFBlKuFrkTTGlFOVe7C+jHPqAjDJrMA0GCSqGSIb3DQEBCwUAA4IBAQA7Tc3y8IcUafCa8kH6ZRe3lqAuwFKX4AH16JKgobktIS8VOZMol0F6mLEyIjOcOOuZik3eeJm9yhCNeBgWMujI5H0tXp7g4LfpY6PNUUs9naFL0HPeVtDb6ECRtj7PfhOIS9b3qsLFTf0Orx63Gl7zW4/H0NbaN4oyW0cydfuyfYVYk1l8SPuXFs+EJC2u9ilLNk8L7Z1yNE7xEVQvYb1UPvUGP5InNf28/xL0WWIuNO7Ez22FF6ABKtsM7V5eAhLpJM6TWk3NUpGshSmi/Ai4DHlJfHSxJl3xapTJ+w8VV5ZIWaqAQD5uapu1472FJy9HyvOPxzhPtGTZtp7NWHrM
+                    &lt;/ds:X509Certificate&gt;
+                &lt;/ds:X509Data&gt;
+            &lt;/ds:KeyInfo&gt;
+        &lt;/md:KeyDescriptor&gt;
+        &lt;md:AssertionConsumerService isDefault=&quot;true&quot; index=&quot;0&quot; Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot; Location=&quot;https://sample.symbioweb.com&quot; /&gt;;
+    &lt;md:SPSSODescriptor&gt;
+    &lt;md:Organization&gt;
+        &lt;md:OrganizationName xml:lang=&quot;de&quot;&gt;Ploetz + Zeller GmbH&lt;/md:OrganizationName&gt;
+        &lt;md:OrganizationDisplayName xml:lang=&quot;de&quot;&gt;Ploetz + Zeller GmbH&lt;/md:OrganizationDisplayName&gt;
+        &lt;md:OrganizationURL xml:lang=&quot;de&quot;&gt;http://www.p-und-z.de&lt;/md:OrganizationURL&gt;
+    &lt;/md:Organization&gt;
+    &lt;md:ContactPerson contactType=&quot;other&quot;&gt;
+        &lt;md:SurName&gt;Ploetz + Zeller Administrator&lt;/md:SurName&gt;
+        &lt;md:EmailAddress&gt;mailto:administrator@p-und-z.de&lt;/md:EmailAddress&gt;
+    &lt;/md:ContactPerson&gt;;
+&lt;/md:EntityDescriptor&gt;;
+</code></pre><h3 id="ad-fs-active-directory-federation-services">AD FS: Active Directory Federation Services</h3>
+<p>You need to import the FederationMetadata.xml which you have downloaded or created yourself into your Active Directory Federation Services under trust relations to tell your AD FS to create a trust relation with us, <a href="http://symbioworld.com/web">http://symbioworld.com/web</a> (Entity ID of Symbio World).</p>
+<p>Furthermore, rules for group membership and groups have to be set so Active Directory user groups (e.g. SymbioCloudAdmins, SymbioAuthors, SymbioArchitects) are created automatically in Symbio Web and can be used there.</p>
+<h4 id="exemplary-rule-for-group-memberships">Exemplary rule for group memberships</h4>
+<p>c:[Type == &quot;<a href="http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname">http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname</a>&quot;, Issuer == &quot;AD AUTHORITY&quot;] =&lt; add(store = &quot;Active Directory&quot;, types = (&quot;<a href="http://schemas.xmlsoap.org/claims/Group">http://schemas.xmlsoap.org/claims/Group</a>&quot;), query = &quot;;tokenGroups;{0}&quot;, param = c.Value);</p>
+<h4 id="exemplary-rule-for-groups">Exemplary rule for groups</h4>
+<p>c:[Type == &quot;<a href="http://schemas.xmlsoap.org/claims/Group">http://schemas.xmlsoap.org/claims/Group</a>&quot;, Value =~ &quot;(?i)symbio&quot;] =&lt; issue(claim = c);</p>
+<p>This means only AD groups containing „symbio&quot; as sub string are considered.</p>
+<p>The sequence of the rules should look like this:</p>
+<table>
+<thead>
+<tr>
+<th>Pos.</th>
+<th>Rule</th>
+<th>Type</th>
+<th>Claims</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Group Memberships</td>
+<td>Custom Rule</td>
+<td>c:[Type == &quot;<a href="http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname">http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname</a>&quot;, Issuer == &quot;AD AUTHORITY&quot;] =&amp;gt; add(store = &quot;Active Directory&quot;, types = (&quot;<a href="http://schemas.xmlsoap.org/claims/Group">http://schemas.xmlsoap.org/claims/Group</a>&quot;), query = &quot;;tokenGroups;{0}&quot;, param = c.Value);</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Groups</td>
+<td>Custom Rule</td>
+<td>c:[Type == &quot;<a href="http://schemas.xmlsoap.org/claims/Group">http://schemas.xmlsoap.org/claims/Group</a>&quot;, Value =~ &quot;(?i)symbio&quot;] =&amp;gt; issue(claim = c);</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Basic Claim Rule</td>
+<td>Send LDAP Attributes as Claims</td>
+<td><img src="media/Basic_Claim_Rule_1.jpg" alt="Basic Claim Rule 1"> <img src="media/Basic_Claim_Rule_2.jpg" alt="Basic Claim Rule 2"></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Office Address</td>
+<td>Send LDAP Attributes as Claims</td>
+<td><img src="media/Office_Address.jpg" alt="Office Address"></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/installation-guide/installation/SAML-Requirements-IdP.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

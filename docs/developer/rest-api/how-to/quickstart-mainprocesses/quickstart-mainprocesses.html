@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Quickstart </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Quickstart ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../../index.html">
+                <img class="logo" src="../../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="qsMainProcesses">
+
+<!--[Reference](xref:QSMainProcesses)
+-->
+<table>
+<thead>
+<tr>
+<th>Status: March 2018</th>
+<th>©2018 Ploetz + Zeller GmbH</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="quickstart">Quickstart</h1>
+<h2 id="get-all-released-main-processes-by-code">Get all released main processes by code</h2>
+<h3 id="new-project">New Project</h3>
+<p>In this example, a post request is made in the context of a C# console application, which returns JSON as the result. This JSON can be converted into objects and reused as required. </p>
+<!--
+> [!NOTE]
+
+> [!WARNING]
+
+> [!IMPORTANT]
+
+> [!Caution]
+-->
+<div class="IMPORTANT"><h5>Important</h5><p>A Post Request is required at the beginning. Here is an example:</p>
+</div>
+<pre><code class="lang-c#">private static Facets SendPost(Uri baseUri, string requestUri = null)
+{
+    using (WebRequestHandler handler = new WebRequestHandler())
+    {
+        using (HttpClient hc = new HttpClient(handler))
+        {
+            if (!string.IsNullOrEmpty(requestUri))
+                hc.BaseAddress = baseUri;
+
+            hc.DefaultRequestHeaders.Add(&quot;symbio-auth-token&quot;, &quot;token key&quot;);
+            HttpResponseMessage hrm = hc.PostAsync(string.IsNullOrEmpty(requestUri) ? baseUri.AbsoluteUri : requestUri, null).Result;
+            hrm.EnsureSuccessStatusCode();
+            string returnString = hrm.Content.ReadAsStringAsync().Result;
+
+            Facets facets = JsonConvert.DeserializeObject&lt;Facets&gt;(returnString, new JsonSerializerSettings() { Converters = new[] { new KeyValuePairConverter() } });
+
+            return facets;
+        }
+    }
+}
+</code></pre><p>This example also shows a token that you need to be authenticated. It is appended to the request header.</p>
+<pre><code class="lang-c#">hc.DefaultRequestHeaders.Add(&quot;symbio-auth-token&quot;, &quot;token key&quot;); 
+</code></pre><h3 id="add-or-create-new-token">Add or create new Token</h3>
+<p>The above mentioned token is created in Symbio by an administrator. For more information see <a class="xref" href="../rest-symbio-auth-token-client-temp-example-documentation/rest-symbio-auth-token-client-temp-example-documentation.html">Authentication mit Tokens</a></p>
+<h3 id="build-uri">Build Uri</h3>
+<p>The construction of all valid uris can be found in the Reference category.This example we starts with an overview of all facets. A request is sent and JSON creates a new faceted object from the response.</p>
+<p>The object:</p>
+<pre><code class="lang-c#">internal class Facets
+{
+    public int Count { get; set; }
+    public List&lt;Values&gt; Values { get; set; }
+}
+</code></pre><p>Deserializing the response string:</p>
+<pre><code class="lang-c#">Facets facets = JsonConvert.DeserializeObject&lt;Facets&gt;(returnString, new JsonSerializerSettings  (){ Converters = new[] { new KeyValuePairConverter() } });
+</code></pre><p>Due to the Symbio JSON structure, it is important to create objects for different layers during deserialization. In this example, the primary goal should be the main process level. </p>
+<p>The target Uri contains the current layer and its child elements. Here is an example for the category <code>Management Processes</code> where all child elements are listed:</p>
+<pre><code class="lang-c#">Uri symbioUri = new Uri(&quot;https://Server/Collection/Database/_api/rest/facets/processes/views/tree/elements/Origin Key of Category/&quot;);
+</code></pre><p>Facets contain processes, processes contain views and views contain elements. </p>
+<p>Objects must be created for each layer. For example:</p>
+<pre><code class="lang-c#">internal class Values
+{
+    public string Id { get; set; }
+    public string Type { get; set; }
+    public Attributes Attributes { get; set; }
+    public List&lt;Children&gt; Children { get; set; }
+    public List&lt;Content&gt; Content { get; set; }
+}
+
+internal class Attributes
+{
+    public Dictionary&lt;int, string&gt; Name { get; set; }
+    public Dictionary&lt;int, string&gt; State1 { get; set; }
+}
+
+internal class Children
+{
+    public string Id { get; set; }
+    public string VersionId { get; set; }
+    public string Type { get; set; }
+    public string ExpandUri { get; set; }
+}
+
+internal class Content
+{
+    public string Id { get; set; }
+    public string VersionId { get; set; }
+    public string ExpandUri { get; set; }
+}
+</code></pre><p>The Facets class contains the list of values. The values contain a list of subobjects and attribute objects. In this way, all properties can be addressed and used separately after deserialization, for example for filtering.</p>
+<h3 id="get-help">Get help</h3>
+<p>To create objects according to the Symbio Rest response with corresponding properties, the JSON key should be known. A <code>/help</code> at the end of the Uri will give you a detailed answer, which will show the possible keys.</p>
+<pre><code class="lang-c#">Uri symbioUri = new Uri(&quot;https://Server/Collection/Database/_api/rest/facets/processes/views/tree/elements/Origin Key of Category/help&quot;);
+</code></pre><p>The <code>key</code> element would be a possible property of the objects or another object with its own properties.</p>
+<p>For example, here is an excerpt from the help response in JSON format:</p>
+<pre><code class="lang-json">{
+    &quot;key&quot;: &quot;name&quot;,
+    &quot;displayNames&quot;: {
+        &quot;1031&quot;: &quot;Name&quot;,
+        &quot;1033&quot;: &quot;Name&quot;
+    },
+    &quot;descriptions&quot;: {
+        &quot;1031&quot;: &quot;Name des Elements.&quot;,
+        &quot;1033&quot;: &quot;Name of element.&quot;
+    },
+    &quot;tooltips&quot;: {
+        &quot;1031&quot;: &quot;Name des Elements.&quot;,
+        &quot;1033&quot;: &quot;Name of element.&quot;
+    },
+    &quot;attribute&quot;: {
+        &quot;type&quot;: &quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral,                  PublicKeyToken=b77a5c561934e089&quot;,
+        &quot;dataType&quot;: &quot;MultiLineText&quot;,
+        &quot;isInvariantCulture&quot;: false
+    }
+},
+{
+    &quot;key&quot;: &quot;typeName&quot;,
+    &quot;displayNames&quot;: {
+        &quot;1031&quot;: &quot;Typ&quot;,
+        &quot;1033&quot;: &quot;Type&quot;
+    },
+    &quot;descriptions&quot;: {
+        &quot;1031&quot;: &quot;&quot;,
+        &quot;1033&quot;: &quot;&quot;
+    },
+    &quot;tooltips&quot;: {
+        &quot;1031&quot;: &quot;&quot;,
+        &quot;1033&quot;: &quot;&quot;
+    }
+},
+{
+    &quot;key&quot;: &quot;version&quot;,
+    &quot;displayNames&quot;: {
+        &quot;1031&quot;: &quot;Version&quot;,
+        &quot;1033&quot;: &quot;Version&quot;
+    },
+    &quot;descriptions&quot;: {
+        &quot;1031&quot;: &quot;&quot;,
+        &quot;1033&quot;: &quot;&quot;
+    },
+    &quot;tooltips&quot;: {
+        &quot;1031&quot;: &quot;&quot;,
+        &quot;1033&quot;: &quot;&quot;
+    },
+    &quot;attribute&quot;: {
+        &quot;type&quot;: &quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,
+        &quot;dataType&quot;: &quot;SingleLineText&quot;,
+        &quot;isInvariantCulture&quot;: true
+    }
+},
+{
+    &quot;key&quot;: &quot;state1&quot;,
+    &quot;displayNames&quot;: {
+        &quot;1031&quot;: &quot;Status&quot;,
+        &quot;1033&quot;: &quot;State&quot;
+    },
+    &quot;descriptions&quot;: {
+        &quot;1031&quot;: &quot;Aktuelle Phase im Lebenszyklus eines Elements.&quot;,
+        &quot;1033&quot;: &quot;Current phase of an element&#39;s lifecycle.&quot;
+    },
+    &quot;tooltips&quot;: {
+        &quot;1031&quot;: &quot;Aktuelle Phase im Lebenszyklus eines Elements.&quot;,
+        &quot;1033&quot;: &quot;Current phase of an element&#39;s lifecycle.&quot;
+    },
+    &quot;attribute&quot;: {
+        &quot;type&quot;: &quot;Symbio.Base.Framework.Method.ISelectableValue, Symbio.Base.Framework, Version=0.0.1815.0, Culture=neutral, PublicKeyToken=null&quot;,
+        &quot;dataType&quot;: &quot;SelectionValue&quot;,
+        &quot;isInvariantCulture&quot;: true,
+        &quot;selectableValues&quot;: [
+        {
+            &quot;key&quot;: &quot;show&quot;,
+            &quot;displayNames&quot;: {
+                &quot;1031&quot;: &quot;Status&quot;,
+                &quot;1033&quot;: &quot;State&quot;
+            },
+            &quot;descriptions&quot;: {
+                &quot;1031&quot;: &quot;Aktuelle Phase im Lebenszyklus eines Elements.&quot;,
+                &quot;1033&quot;: &quot;Current phase of an element&#39;s lifecycle.&quot;
+            },
+            &quot;tooltips&quot;: {
+                &quot;1031&quot;: &quot;Aktuelle Phase im Lebenszyklus eines Elements.&quot;,
+                &quot;1033&quot;: &quot;Current phase of an element&#39;s lifecycle.&quot;
+            }
+        },
+        {
+            &quot;key&quot;: &quot;hide&quot;,
+            &quot;displayNames&quot;: {
+                &quot;1031&quot;: &quot;Status&quot;,
+                &quot;1033&quot;: &quot;State&quot;
+            },
+            &quot;descriptions&quot;: {
+                &quot;1031&quot;: &quot;Aktuelle Phase im Lebenszyklus eines Elements.&quot;,
+                &quot;1033&quot;: &quot;Current phase of an element&#39;s lifecycle.&quot;
+            },
+            &quot;tooltips&quot;: {
+                &quot;1031&quot;: &quot;Aktuelle Phase im Lebenszyklus eines Elements.&quot;,
+                &quot;1033&quot;: &quot;Current phase of an element&#39;s lifecycle.&quot;
+            }
+        }]
+    }
+},
+</code></pre><h3 id="filter-on-client">Filter on client</h3>
+<p>Finally, an example of how all this information is combined to use the objects and their properties. As a reminder, the goal was to keep and list main processes in released status. A request is made for each level, so that you get all the main processes under all categories. From this set, only the processes with the value <code>released</code> are then output in the attribute <code>state1</code> of the process.</p>
+<pre><code class="lang-c#">private static void Main(string[] args)
+{
+    Uri symbioUri = new Uri(&quot;https://Server/Collection/Database/_api/rest/facets/&quot;);
+
+    Facets rootsElements = SendPost(symbioUri, &quot;processes/views/tree/elements/&quot;);
+    foreach (var child in rootsElements.Values.FirstOrDefault(x =&gt; x.Type == &quot;processHouse&quot;).Children)
+    {
+        Facets processeContainers = SendPost(new Uri(child.ExpandUri));
+
+        Console.WriteLine(processeContainers.Values.First().Attributes.Name.First().Value);
+        if (processeContainers.Values.First().Content != null)
+        {
+            foreach (var process in processeContainers.Values.First().Content)
+            {
+                Facets processes = SendPost(new Uri(process.ExpandUri));
+
+                if (processes.Values.First().Attributes.State1.First().Value == &quot;released&quot;)
+                {
+                    Console.WriteLine(&quot;     &quot; + processes.Values.First().Attributes.Name.First().Value);
+                }
+            }
+        }
+    }
+    Console.Read();
+}
+</code></pre><h4 id="errors">Errors</h4>
+<p>Read more here: <a class="xref" href="../error.html">Rest API error handling</a></p>
+<h1 id="faqs">FAQ&#39;s</h1>
+<h1 id="impressum">Impressum</h1>
+<p> <strong>publisher</strong>         </p>
+<p> Ploetz + Zeller GmbH     </p>
+<p> Einsteinring 41-43       </p>
+<p> 85609 München            </p>
+<p> Tel.: +49 89 890635 – 0  </p>
+<p> Fax: +49 89 890635 – 55  </p>
+<table>
+<thead>
+<tr>
+<th>E-Mail: info@p-und-z.de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>IMPRESSUM</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Ploetz + Zeller GmbH accepts no liability for the correctness and completeness of the presentation/image in the document. The described and possible functionalities of the software refer to the respective version status. Customer-specific adaptations are not included. The information in this document is subject to change at any time. Ploetz + Zeller GmbH is not obliged to inform about the updates of the document.</p>
+<p> This documentation as well as all contributions, representations and illustrations contained therein are protected by copyright. Any use not expressly permitted by copyright law requires the prior consent of Ploetz + Zeller GmbH. This applies in particular to reproductions, adaptations, translations, microfilming as well as storage and processing in electronic systems.                                    </p>
+<p> Ploetz + Zeller GmbH regards the information, knowledge and illustrations contained in this documentation as its sole property. The documentation or the information, knowledge and illustrations contained therein may not be made available, published or otherwise disseminated to third parties, either in whole or in part, directly or indirectly, without the prior written consent of Ploetz + Zeller GmbH.<br>                                                                                                                                                                                                                                                                                                                                                                                                         Ploetz + Zeller GmbH reserves the right to assert all relevant rights, in particular in the event of patents being granted. The handing over of the documentation does not create any claim to a license or use.                                                                                                                                                                                                                            </p>
+<p> Subject to technical modifications. Product names used are trademarks or registered trademarks of their respective owners.                                                                                                                                                                                                                                                                                                                                        </p>
+<p> Symbio® is a registered trademark of PLOETZ + ZELLER GmbH, Munich.                                                                                                                                                                                                                                                                                                                                                                                                     |</p>
+<p>| Ploetz + Zeller GmbH                                      </p>
+<p> Einsteinring 41-43                                         </p>
+<p> 85609 München                                              |
+| Phone: +49 89 890635 – 0                                </p>
+<p> Fax: +49 89 890635 – 55                                    </p>
+<p> E-Mail: <a href="mailto:info@p-und-z.de">info@p-und-z.de</a>                                  </p>
+<p> ©2018 Ploetz + Zeller GmbH                                 |</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/developer/rest-api/how-to/quickstart-mainprocesses/quickstart-mainprocesses.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Troubleshooting </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Troubleshooting ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="troubleshooting">Troubleshooting</h1>
+
+<h2 id="general">General</h2>
+<ul>
+<li>Ensure that the installation of all the required components was successful</li>
+<li>Symbio has to be configured and running</li>
+<li>Reporting micro service (RMS) has to be configured and running</li>
+<li>SSRS components (modules, service) have to be configured and running</li>
+<li>Ensure that the used user accounts have the appropriate rights to e.g. create folders, database, etc.</li>
+<li>If one service refuses to start in IIS, check the credentials of the user or change the user</li>
+<li>Check your table entries in the ConfigStore for undesired whitespaces which you may have inserted by accident</li>
+</ul>
+<hr>
+<h2 id="rms-troubleshooting">RMS Troubleshooting</h2>
+<h3 id="http-error-50019-internal-server-error---incorrect-config">HTTP Error 500.19 Internal Server Error - Incorrect Config</h3>
+<p>Open Powershell and navigate to the installation folder of your RMS microservices.
+Use the following commands to check that your .Net Core is installed and recognized correctly.</p>
+<pre><code class="lang-Powershell">dotnet
+</code></pre><p><code>If you get an error here, you are missing the .NET Core Windows Server Hosting Package.</code></p>
+<pre><code class="lang-Powershell">dotnet Symbio.Service.Reporting.RestSync.dll
+</code></pre><p>Now open a browser and enter the following URL.</p>
+<pre><code class="lang-URL">http://localhost:5000
+</code></pre><p>If you now see a page with a simple login dialog, there is an error with the IIS in connection with .Net Core.</p>
+<p>To fix this, reinstall or repair the .NET Core Windows Server Hosting Package.</p>
+<h3 id="an-error-occurred-while-starting-the-application">An error occurred while starting the application</h3>
+<p>If this error is displayed in the website, there is an error in your appsettings.json.</p>
+<p>Navigate to the installation directory of the Microservice and open your appsettings.json. Now check the stored connection string <em>ConfigStoreConnection</em> and the specification <em>ConfigStoreTableName</em></p>
+<h3 id="rms-shows-error-message-in-log-when-activating-clr">RMS shows error message in log when activating CLR</h3>
+<ul>
+<li>Check the SQL Server version. If this version is 2016, check how current it is.
+  If necessary, install the <a href="https://support.microsoft.com/en-ca/help/4037357/cumulative-update-9-for-sql-server-2016">Cumulative Update 9 for SQL Server 2016</a>.</li>
+<li><p>Try to activate CLR manually.</p>
+<pre><code class="lang-sql">EXEC sp_configure &#39;clr enabled&#39;, 1;
+    RECONFIGURE;
+
+EXEC sp_configure &#39;show advanced options&#39;,1;
+    RECONFIGURE;
+
+EXEC sp_configure &#39;clr strict security&#39;, 0;
+    RECONFIGURE;
+</code></pre></li>
+</ul>
+<hr>
+<h2 id="symbio-troubleshooting">Symbio Troubleshooting</h2>
+<h3 id="linkingunlinking-doesnt-work">Linking/unlinking doesn&#39;t work</h3>
+<h4 id="symbio-shows-a-red-error-message">Symbio shows a red error message</h4>
+<ul>
+<li>Go to _sysadmin/_admin level and check the configuration of the report pool you want to link</li>
+<li>The endpoint must be properly configured and the reporting micro service (RMS) has to be setup properly and responding</li>
+<li>Also check for missing firewall rules that prevent Symbio from communicating with the RMS and vice versa</li>
+<li>Be sure that you provided the correct authentication token (The value in the report pool and in the ConfigStore have to match)</li>
+</ul>
+<h4 id="after-unlinking-the-report-pool-the-reports-remain-in-the-storage-that-was-unlinked">After unlinking the report pool the reports remain in the storage that was unlinked</h4>
+<ul>
+<li>When unlinking a report pool all the reports that were created on Symbio side should be deleted</li>
+<li>If this is not the case, it is most likely that you have modified the URL of the reports, so that they no longer include the tenant id key</li>
+</ul>
+<h4 id="after-linking-the-report-pool-no-reports-appear-in-symbio">After linking the report pool no reports appear in Symbio</h4>
+<ul>
+<li>Check the log of the RMS for errors. It is most likely that the RMS had some problem with retrieving the available reports from SSRS side</li>
+<li>Check the credentials to access the SSRS (e.g. SsrsSettings -&gt; SOAP) in the ConfigStore</li>
+<li>On SSRS side check, if the target folder already exists so that the reports were not copied</li>
+<li>Check all the components mentioned above and verify, that they are running</li>
+</ul>
+<h3 id="display-of-reports-in-symbio-fails">Display of reports in Symbio fails</h3>
+<ul>
+<li>Check the reports configured in the admin area and verify, that all settings are pointing to the correct urls, especially url and the authentication url</li>
+<li>The tenant id parameter has to be provided in the report url, it should automatically provided, when linking is done</li>
+<li>Check the headers of the reports to have the correct data, e.g. compare it with the token on SSRS side, so that Symbio may communicate with the SSRS</li>
+<li>Verify, that there are no typos, e.g. special characters or incorrect placeholder values</li>
+<li><strong>NOTE:</strong> Please be aware, that for proper cross communication Symbio and the SSRS should reside in the same domain. This is important for the certificates you use as much as for the configuration of the report, e.g. <em><code>https://SERVERNAME.DOMAIN/REPORTSERVERNAME...</code></em> for the <code>URL</code>.</li>
+</ul>
+<h3 id="reports-show-incorrect-data">Reports show incorrect data</h3>
+<ul>
+<li>Be sure to use the latest report files on SSRS side, that are applicable for you</li>
+<li>Observe the RMS log for errors and perhaps have a look at the configured ODS database</li>
+<li>In the ConfigStore check the hangfire tables (Hangfire.Job(s), Hangfire.Set) for scheduled jobs or retries, these could indicate sql remedies</li>
+<li>Check if Symbio is fitting to all the other components regarding the version. In most cases every component should be available in its latest version.</li>
+</ul>
+<hr>
+<h2 id="help-everything-is-messed-up-and-i-want-to-start-over-clean">HELP! Everything is messed up and I want to start over clean</h2>
+<h3 id="setup-all-your-components">Setup all your components</h3>
+<ul>
+<li>Within this manual there are descriptions on how to configure and set up each component. Follow them until everything is set up</li>
+</ul>
+<h3 id="unlink-your-database">Unlink your database</h3>
+<ul>
+<li>If you want a fresh and clean start, it is necessary to unlink your database from the report pool</li>
+</ul>
+<h3 id="clean-existing-data-preserving-created-databases">Clean existing data preserving created databases</h3>
+<ul>
+<li>Stop the RMS on IIS so it can not be reached</li>
+<li>Locate the database used for your ConfigStore</li>
+<li>If you didn&#39;t configure a separate Hangfire database, delete all the hangfire tables in the ConfigStore database (Hangfire prefix!)</li>
+<li>If you are afraid of deleting all the tables, set every row in Hangfire.Job to &quot;Failed&quot;, where the StateName is &quot;Processing&quot; or &quot;Scheduled&quot;, and delete all rows in Hangfire.Set</li>
+<li>Remove all tables of the ODS database you specified <strong>(ATTENTION!*)</strong></li>
+<li>Browse to your SSRS web portal and check the folder structure</li>
+<li>Inspect the folder prefixed with your report pool id (OriginKey of the report pool you connected in Symbio) for the latest report</li>
+<li>If the reports are outdated, update them or delete the whole folder <strong>(ATTENTION!*)</strong></li>
+<li>If you have managed all this, restart the RMS and try to link again in Symbio</li>
+</ul>
+<p><em>**NOTE</em>*: Only delete the TenantId prefixed folder, if you are absolutely sure, that no other database currently uses it</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/services/reporting-service/troubleshooting.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

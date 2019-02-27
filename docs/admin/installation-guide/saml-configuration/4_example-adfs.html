@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Symbio SSO </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Symbio SSO ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="example-adfs">
+<h1 id="symbio-sso">Symbio SSO</h1>
+
+<h2 id="worked-example-symbio--ad-fs">Worked Example: Symbio &amp; AD FS</h2>
+<p>The Microsoft ActiveDirectory Federation Services provide a SAML 2.0 Identity Provider (IdP) implementation which is backed by a company domain&#39;s Active Directory. The following example describes setting up Symbio as a Service Provider (SP) in and for AD FS.</p>
+<p>AD FS and IdP will be used interchangeably, the same holds true for Symbio and SP.</p>
+<h3 id="preparation-of-active-directory">Preparation of Active Directory</h3>
+<p>With respect to &quot;User &amp; Rights Management Considerations&quot; start by creating appropriate UNIVERSAL (or at least global) user groups in ActiveDirectory (AD). AD FS will not transmit AD local user groups as group claims. Depending on your requirements you may have different user groups to create. The following is just an example.</p>
+<ul>
+<li>SymbioViewers will be able to browse the Symbio database</li>
+<li>SymbioAuthors will be able to edit parts of the Symbio database</li>
+<li>SymbioApprovers will be allowed to approve elements in the release cycle</li>
+<li>SymbioAnalysts will be able to run analysis extensions in the Symbio database</li>
+<li>SymbioArchitects will be able to manage the architecture of elements in the Symbio database</li>
+<li>SymbioAdmins will be able to administer the Symbio database (e.g. setting up user groups and permission sets)</li>
+<li>SymbioViewers_HR will be able to browse HR processes</li>
+<li>SymbioAuthors_HR will be able to edit HR processes</li>
+<li>SymbioApprovers_HR will be able to approve HR processes</li>
+<li>SymbioArchitects_HR will be able to manage HR architecture tasks</li>
+</ul>
+<p>Next assign users to these user groups.</p>
+<h3 id="configuration-of-symbio-in-ad-fs">Configuration of Symbio in AD FS</h3>
+<p>Before actually creating Symbio as a relying parts trust in AD FS, decide which EntityID you will give to Symbio and under which URL Symbio will be available. For this example we use the following values:</p>
+<ul>
+<li>Symbio EntityID: urn:symbio.example.com:adfs-example</li>
+<li>Symbio URL: <a href="https://processes.example.com/symbio-test/">https://processes.example.com/symbio-test/</a></li>
+</ul>
+<p>In this case Symbio is available via a virtual subdirectory &quot;/symbio-test/&quot; and not directly on the subdomain root level.</p>
+<h4 id="configure-relying-party-trust">Configure Relying Party Trust</h4>
+<p>Open the AD FS Management App and right-click on &quot;AD FS/Trust Relationships/Relying Party Trusts&quot;, select &quot;Add Relying Party Trust...&quot;, choose &quot;Enter data about the relying party manually&quot;:</p>
+<ul>
+<li>Display name: Symbio Test</li>
+<li>Choose AD FS profile (not 1.0 nor 1.1)</li>
+<li>Don&#39;t configure a certificate</li>
+<li>Enable support for the SAML 2.0 WebSSO protocol</li>
+<li>Relying party SAML 2.0 SSO service URL: <a href="https://processes.example.com/symbio-test/">https://processes.example.com/symbio-test/</a></li>
+<li>Relying party trust identifier: urn:symbio.example.com:adfs-example</li>
+<li>Don&#39;t configure multi-factor authentication settings</li>
+<li>Permit all users to access this relying party</li>
+</ul>
+<p>Make sure that the configured Endpoints are POST and that Advanced is set to SHA-256 secure hash algorithm.</p>
+<h4 id="configure-claim-rules">Configure Claim Rules</h4>
+<p>Add the following claim rules:</p>
+<ol>
+<li>Group Membership:<ul>
+<li>Send Claims Using a Custom Rule</li>
+<li>Claim rule name: Group Membership</li>
+<li>Custom rule:
+<code>c:[Type == &quot;http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname&quot;, Issuer == &quot;AD AUTHORITY&quot;]
+=&gt; add(store = &quot;Active Directory&quot;, types = (&quot;http://schemas.xmlsoap.org/claims/Group&quot;), query = &quot;;tokenGroups;{0}&quot;, param = c.Value);</code></li>
+</ul>
+</li>
+<li>Group Filter:<ul>
+<li>Send Claims Using a Custom Rule</li>
+<li>Claim rule name: Group Filter</li>
+<li>Custom rule:
+<code>c:[Type == &quot;http://schemas.xmlsoap.org/claims/Group&quot;, Value =~ &quot;(?i)symbio&quot;]
+=&gt; issue(claim = c);</code></li>
+</ul>
+</li>
+<li>Basic Attributes:<ul>
+<li>Send LDP Attributes as Claims</li>
+<li>Claim rule name: Basic Attributes</li>
+<li>Attribute Store: Active Directory</li>
+<li>User-Principal-Name &rarr; UPN</li>
+<li>Surname &rarr; Surname</li>
+<li>Given-Name &rarr; Given Name</li>
+<li>E-Mail-Addresses &rarr; E-Mail-Address</li>
+</ul>
+</li>
+</ol>
+<h3 id="configuration-of-ad-fs-in-symbio">Configuration of AD FS in Symbio</h3>
+<p>Download the Metadata XML file from your AD FS. If your AD FS resides on <a href="https://fs.example.com">https://fs.example.com</a> then the metadata should be available at <a href="https://fs.example.com/FederationMetadata/2007-06/FederationMetadata.xml">https://fs.example.com/FederationMetadata/2007-06/FederationMetadata.xml</a></p>
+<p>The medatata file is a text file containing XML, you can read it using Notepad/Editor.</p>
+<p>Usually it starts with the <entitydescriptor> tag which has an &quot;entityID&quot; attribute whose value is the IdP EntityID we need to configure Symbio.<p>
+<p>Near the end you will find the <singlesignonservice> elements, look for the one with Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect&quot;, its &quot;Location&quot; attribute value will be needed to configure Symbio.<p>
+<p>Here are the values from the example metadata XML file:</p>
+<ul>
+<li>entityID: <a href="http://cadc05.example.com/adfs/services/trust">http://cadc05.example.com/adfs/services/trust</a></li>
+<li>Location: <a href="https://fs.example.com/adfs/ls/">https://fs.example.com/adfs/ls/</a></li>
+</ul>
+<h4 id="setting-up-a-new-saml-authentication-provider-in-symbio">Setting up a new SAML Authentication Provider in Symbio</h4>
+<p>Login as an administrator to the database or collection for which you want to activate SAML login. For this example we will set up SAML login for database &quot;GreenField&quot; in collection &quot;Testing&quot;, the corresponding URL is <a href="https://processes.example.com/symbio-test/Testing/GreenField/editor/1033/">https://processes.example.com/symbio-test/Testing/GreenField/editor/1033/</a></p>
+<p>Switch to the Admin section and there to Authentication Providers. Make sure that the root node is set to &quot;Use local&quot; and then add a new SAML Authentication Provider with ID &quot;ADFS&quot;. Select it and adjust its details:</p>
+<ul>
+<li>Translate (if you wish) - the ID stays &quot;ADFS&quot;<ul>
+<li>English: SSO Login</li>
+<li>German: SSO Anmeldung</li>
+</ul>
+</li>
+<li>Standard role: Viewer</li>
+<li>Group management: Yes</li>
+<li>Symbio EntityID: urn:symbio.example.com:adfs-example</li>
+<li>Symbio Host URL: <a href="https://processes.example.com/symbio-test/">https://processes.example.com/symbio-test/</a></li>
+<li>IdP EntityID: <a href="http://cadc05.example.com/adfs/services/trust">http://cadc05.example.com/adfs/services/trust</a></li>
+<li>IdP Metadata: (upload the XML file or link to it, see below)</li>
+<li>IdP SSO service URL: <a href="https://fs.example.com/adfs/ls/">https://fs.example.com/adfs/ls/</a></li>
+<li>Enabled: Yes</li>
+<li>Visible: Yes</li>
+</ul>
+<h5 id="symbio-on-premise">Symbio on Premise</h5>
+<p>If your Symbio web server can reach your AD FS server, consider adding the Metadata XML file as a URL (see above) instead of downloading it from AD FS and then uploading it to Symbio. That way changes to the metadata (e.g. a new certficate) don&#39;t require manual updates to Symbio.</p>
+<h5 id="symbio-in-cloud">Symbio in Cloud</h5>
+<p>Don&#39;t add the Metadata XML file as a URL. The cloud server will most likely have no access to the AD FS server which runs on your internal network; Symbio won&#39;t be able to access the metadata and therefore will fail on every SAML login attempt.</p>
+<h4 id="configure-saml-user-groups-and-permission-sets">Configure SAML User Groups and Permission Sets</h4>
+<p>The new provider is now live and usable. Currently all new users logging in via SAML are made Viewers. We need to set up user groups and permission sets for details rights management:</p>
+<ol>
+<li>Switch to the Admin area of your database/collection</li>
+<li>Select Permission Sets and create the following sets:<ul>
+<li>SymbioViewers: ShowElement, OpenElement</li>
+<li>SymbioAuthors: ShowElement, OpenElement, EditElement, NewElement, DeleteElement</li>
+<li>SymbioApprovers: ShowElement, OpenElement, ApproveElement</li>
+<li>SymbioViewers_HR: ShowElement, OpenElement</li>
+<li>SymbioAuthors_HR: ShowElement, OpenElement, EditElement, NewElement, DeleteElement</li>
+<li>SymbioApprovers_HR: ShowElement, OpenElement, ApproveElement</li>
+</ul>
+</li>
+<li>Switch back to the Admin area</li>
+<li>Select User Groups, create the following SAML user groups, and assign them the listed permission sets / application roles :<ul>
+<li>SymbioViewers: SymbioViewers / Viewer</li>
+<li>SymbioAuthors: SymbioAuthors / Author</li>
+<li>SymbioApprovers: SymbioApprovers / Approver</li>
+<li>SymbioAnalysts: SymbioAuthors / Analyst</li>
+<li>SymbioArchitects: SymbioAuthors, SymbioApprovers / Architect</li>
+<li>SymbioAdmins: SymbioAuthors, SymbioApprovers, SymbioApprovers_HR / Administrator</li>
+<li>SymbioViewers_HR: SymbioViewers_HR / Viewer</li>
+<li>SymbioAuthors_HR: SymbioAuthors_HR / Author</li>
+<li>SymbioApprovers_HR: SymbioApprovers_HR / Approver</li>
+<li>SymbioArchitects_H: SymbioAuthors_HR, SymbioApprovers_HR / Approver</li>
+</ul>
+</li>
+</ol>
+<p>Finally, you can set up permissions for your processes and repositories.</p>
+<p>Now a user logging in via SAML will receive all rights based on his AD group membership. Examples:</p>
+<ul>
+<li>A user not member of any Symbio* user group will be assigned no permission sets, no user groups, and the default role of Viewer</li>
+<li>A user who is a member of SymbioAdmins and SymbioAuthors will get the following assignments:<ul>
+<li>SAML user groups: SymbioAuthors, SymbioAdmins</li>
+<li>Permission sets: SymbioAuthors, SymbioApprovers, SymbioApprovers_HR</li>
+<li>Role: Administrator</li>
+</ul>
+</li>
+</ul>
+</singlesignonservice></entitydescriptor></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/installation-guide/saml-configuration/4_example-adfs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Facets </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Facets ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="info">
+<h1 id="facets">Facets</h1>
+
+<p><strong>api-version</strong>: 1.0</p>
+<p>Retrieves the information about the current storage.</p>
+<pre><code>POST  /{collectionId}/{storageId}/_api/rest/info
+</code></pre><h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>collectionId</td>
+<td>path</td>
+<td>true</td>
+<td>string</td>
+<td>The ID of the storage collection.</td>
+</tr>
+<tr>
+<td>storageId</td>
+<td>path</td>
+<td>true</td>
+<td>string</td>
+<td>The ID of the tenant.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="responses">Responses</h2>
+<h3 id="success-200">Success 200</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>The type of the storage: IStorageContext, IStorageCollectionContext or ISysAdminContext.</td>
+</tr>
+<tr>
+<td>tenant</td>
+<td>string</td>
+<td>The tenant id of the storage.</td>
+</tr>
+<tr>
+<td>baseTenat</td>
+<td>string</td>
+<td>The tenant id of the base storage.</td>
+</tr>
+<tr>
+<td>template</td>
+<td>string</td>
+<td>Name of the storage template.</td>
+</tr>
+<tr>
+<td>dataCultures</td>
+<td>string[]</td>
+<td>Available data cultures in the storage.</td>
+</tr>
+<tr>
+<td>defaultDataCulture</td>
+<td>string</td>
+<td>Default data culture of the storage.</td>
+</tr>
+<tr>
+<td>isValid</td>
+<td>bool</td>
+<td><em>true</em> if the storage is valid, otherwise <em>false</em>.</td>
+</tr>
+<tr>
+<td>region</td>
+<td>RegionInfo</td>
+<td>The configured region in the storage.</td>
+</tr>
+<tr>
+<td>timeZone</td>
+<td>TimeZoneInfo</td>
+<td>The configured time zone in the storage.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error-4xx">Error 4xx</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>The error message.</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="#operationresulttype">OperationResultType</a></td>
+<td>The result type.</td>
+</tr>
+<tr>
+<td>data</td>
+<td><a href="#error">Error[]</a></td>
+<td>The list of errors.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<h3 id="get-the-info-of-a-bpmn-storage">Get the info of a BPMN storage</h3>
+<h4 id="request">Request</h4>
+<pre><code>POST https://demo.symbioworld.com/pz/showcase/_api/rest/info/
+</code></pre><h4 id="reponse-200-ok">Reponse (200 OK)</h4>
+<pre><code class="lang-json">{
+    &quot;type&quot;: &quot;IStorageContext&quot;,
+    &quot;tenant&quot;: &quot;e3f435b3-b1e4-4178-afde-f067027d2113&quot;,
+    &quot;baseTenant&quot;: &quot;0d398b8c-5601-4288-969a-b4eb0d36ffea&quot;,
+    &quot;template&quot;: &quot;Symbio Web Standard (BPMN)&quot;,
+    &quot;dataCultures&quot;: [
+        &quot;de-DE&quot;,
+        &quot;en-US&quot;
+    ],
+    &quot;defaultDataCulture&quot;: &quot;en-US&quot;,
+    &quot;isValid&quot;: true,
+    &quot;region&quot;: {
+        &quot;name&quot;: &quot;DE&quot;,
+        &quot;englishName&quot;: &quot;Germany&quot;,
+        &quot;displayName&quot;: &quot;Germany&quot;,
+        &quot;nativeName&quot;: &quot;Germany&quot;,
+        &quot;twoLetterISORegionName&quot;: &quot;DE&quot;,
+        &quot;threeLetterISORegionName&quot;: &quot;DEU&quot;,
+        &quot;threeLetterWindowsRegionName&quot;: &quot;DEU&quot;,
+        &quot;isMetric&quot;: true,
+        &quot;geoId&quot;: 94,
+        &quot;currencyEnglishName&quot;: &quot;Euro&quot;,
+        &quot;currencyNativeName&quot;: &quot;Euro&quot;,
+        &quot;currencySymbol&quot;: &quot;€&quot;,
+        &quot;isoCurrencySymbol&quot;: &quot;EUR&quot;
+    },
+    &quot;timeZone&quot;: {
+        &quot;Id&quot;: &quot;W. Europe Standard Time&quot;,
+        &quot;DisplayName&quot;: &quot;(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna&quot;,
+        &quot;StandardName&quot;: &quot;W. Europe Standard Time&quot;,
+        &quot;DaylightName&quot;: &quot;W. Europe Daylight Time&quot;,
+        &quot;BaseUtcOffset&quot;: &quot;01:00:00&quot;,
+        &quot;AdjustmentRules&quot;: [
+            {
+                &quot;DateStart&quot;: &quot;0001-01-01T00:00:00&quot;,
+                &quot;DateEnd&quot;: &quot;9999-12-31T00:00:00&quot;,
+                &quot;DaylightDelta&quot;: &quot;01:00:00&quot;,
+                &quot;DaylightTransitionStart&quot;: {
+                    &quot;TimeOfDay&quot;: &quot;0001-01-01T02:00:00&quot;,
+                    &quot;Month&quot;: 3,
+                    &quot;Week&quot;: 5,
+                    &quot;Day&quot;: 1,
+                    &quot;DayOfWeek&quot;: &quot;Sunday&quot;,
+                    &quot;IsFixedDateRule&quot;: false
+                },
+                &quot;DaylightTransitionEnd&quot;: {
+                    &quot;TimeOfDay&quot;: &quot;0001-01-01T03:00:00&quot;,
+                    &quot;Month&quot;: 10,
+                    &quot;Week&quot;: 5,
+                    &quot;Day&quot;: 1,
+                    &quot;DayOfWeek&quot;: &quot;Sunday&quot;,
+                    &quot;IsFixedDateRule&quot;: false
+                },
+                &quot;BaseUtcOffsetDelta&quot;: &quot;00:00:00&quot;
+            }
+        ],
+        &quot;SupportsDaylightSavingTime&quot;: true
+    }
+}
+</code></pre><h2 id="definitions">Definitions</h2>
+<h3 id="operationresulttype">OperationResultType</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>critical</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error</td>
+<td>string</td>
+</tr>
+<tr>
+<td>warning</td>
+<td>string</td>
+</tr>
+<tr>
+<td>success</td>
+<td>string</td>
+</tr>
+<tr>
+<td>unauthorized</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error">Error</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>The error message.</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/developer/rest-api/reference/info.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

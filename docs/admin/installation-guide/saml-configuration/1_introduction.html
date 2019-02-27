@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Symbio SSO </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Symbio SSO ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="introduction">
+<h1 id="symbio-sso">Symbio SSO</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>To provide Single-Sign-On capabilities (SSO) Symbio implements the Service Provider part of the SAML protocol.</p>
+<h3 id="what-is-saml">What is SAML?</h3>
+<p>SAML (security assertion markup language, <a href="https://en.wikipedia.org/wiki/SAML_2.0">Wikipedia</a>) is an HTTP- and XML-based protocol for SSO authentication. It distinguishes two parties which have a mutual trust relation:</p>
+<ul>
+<li>Service Provider (SP) and</li>
+<li>Identity Provider (IdP)</li>
+</ul>
+<p>The SP (e.g. Symbio) delegates user authentication to the IdP (e.g. AD FS, Ping Federate) which in turn provides user claims (i.e. user-specific properties like name, e-mail address, group memberships) to the SP. Based on these claims the SP can decide on the authorization level of the authenticated user.</p>
+<h3 id="how-does-saml-work">How does SAML work?</h3>
+<p>SAML-based authentication is completely browser-based and an interactive process. It can be initiated by the IdP or by the SP. Symbio only supports SP-initiated authentication:</p>
+<ol>
+<li>The user navigates to the start page of the SP</li>
+<li>If there is no existing session for the browser the SP redirects the browser to the start page of the IdP (providing additional info about itself to the IdP)</li>
+<li>If there is no existing login session for the browser the IdP displays a login form to the user</li>
+<li>Upon successful login (or if there is an existing login session for the browser) the IdP redirects the browser to the start page of the SP (providing the claims of the logged in user to the SP)</li>
+<li>The SP analyzes the user claims and decides on the authorization level the user will be using for this session</li>
+</ol>
+<p>This authentication flow involves two well-known endpoints:</p>
+<ul>
+<li>The SSO Service of the IdP</li>
+<li>The Assertion Consumer Service (ACS) of the SP</li>
+</ul>
+<h3 id="how-does-symbio-use-saml">How does Symbio use SAML?</h3>
+<p>Symbio uses the REDIRECT endpoint of the SSO Service of the IdP to initiate the authentication flow and expects a POST response to its ACS endpoint.</p>
+<p>The more detailed flow of events in the context of Symbio authentication/authorization is depicted below:</p>
+<p><img src="media/sso-flow.png" alt=""></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/installation-guide/saml-configuration/1_introduction.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

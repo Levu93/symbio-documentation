@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Manual Installation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Manual Installation ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="manual-installation">Manual Installation</h1>
+
+<ol>
+<li><p><strong>Download the installation package and extract the contents to the desired location.</strong></p>
+<p>Please ensure that the (dedicated) service user account has sufficient rights in the target folder or the service won&#39;t start.</p>
+<p> You can download the package <a href="https://symbioworld.com/download/symbio/symbio-service-rendering.zip">here</a></p>
+</li>
+<li><p><strong>Reserve the URL(s) the service should listen on using netsh</strong>, on a command line execute:</p>
+<pre><code>netsh http add urlacl url=https://+:3334/ user=everyone
+netsh http add urlacl url=https://localhost:3334/ user=everyone
+</code></pre><p>The above example is the most simple way to reserve the default URL of the service.
+The generic version of the command looks like this:</p>
+<pre><code>netsh http add urlacl url=[http-or-https]://[host-name-and-domain]:[port]/[possible-path/] user=[DOMAIN\username]
+</code></pre><h3 id="https">HTTPS</h3>
+<p><strong>Symbio will allow HTTPS only.</strong></p>
+<p>For reserving an HTTPS URL you need two things:</p>
+<ul>
+<li>an SSL certificate</li>
+<li>a binding of that certificate to a port</li>
+</ul>
+<h4 id="ssl-certificate-thumbprint">SSL certificate thumbprint</h4>
+<p>You need an SSL certificate for HTTPS bindings. Please, ask your system administrator for assistance. As soon as the certificate is available and installed on the service machine, you can retrieve its thumbprint following the description in this article: <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate">How to: Retrieve the Thumbprint of a Certificate</a> (with the intended purpose being &quot;Server Authentication&quot; here). You will need this thumbprint (without spaces) in the next step.</p>
+<h4 id="ssl-certificate-port-binding">SSL certificate port binding</h4>
+<pre><code>netsh http add sslcert hostnameport=[host-name-and-domain]:[port] certhash=[thumbprint] appid={BD856AF7-ACAA-4B81-B2F9-B19845E12AE5} certstorename=my
+</code></pre><p>The appid given above is unique and meant to identify the Symbio Rendering Service, regardless of where and how often it is installed.</p>
+<p>More details for binding HTTPS URLs can be found in this article: <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate">How to: Configure a Port with an SSL Certificate</a></p>
+</li>
+<li><p><strong>Update the file Symbio.Rendering.exe.config</strong></p>
+<p>If you changed the endpoint at which the service should listen during URL reservation above,
+please also change the endpoint in the confguration file (setting &quot;Uris&quot;) from <em><a href="https://localhost:3334">https://localhost:3334</a></em>
+to the one you selected.</p>
+<p>You should also decide the name under which the service should be installed in the service manager now.
+If you want to change the default name, please change it in the configuration file (setting &quot;ServiceName&quot;)
+from <em>SymbioRenderingService</em> to the one you want to use.</p>
+</li>
+<li><p><strong>Install the rendering service in the service manager</strong>, on a command line execute:</p>
+<pre><code>installutil [/name=&lt;service-name&gt;] &lt;assembly-path&gt;
+</code></pre><p>Set &lt; service-name &gt; to the name you selected above, or ignore the whole option if you want to stay with the default name and didn&#39;t change it in the configuration file.</p>
+<p>Set &lt; assembly-path &gt; to the full path to Symbio.RenderingService.exe, including file name and extension.</p>
+<p><strong>You will need to enter user credentials for the user account which will run the service.</strong></p>
+<p>InstallUtil can usually be found here: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe</p>
+<p><strong>The Rendering Service is a 64-bit application so you need to use the 64-bit InstallUtil with it!</strong></p>
+<h3 id="attention">Attention</h3>
+<ul>
+<li>If /name is provided it must also be set in the application config file!</li>
+<li>If /name is provided it must also be used during de-installation!</li>
+</ul>
+</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/services/rendering-service/installation-manual.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Configuration </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Configuration ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="configuration">Configuration</h1>
+
+<h2 id="configuration-for-the-rms">Configuration for the RMS</h2>
+<h3 id="reporting-micro-service-and-config-store">Reporting micro service and config store</h3>
+<ol>
+<li>The reporting micro service has to deployed on an accessable machine to ensure proper communication to both sides, Symbio on the one hand and the used reporting services (e.g. SSRS) on the other hand.</li>
+<li>Navigate to the installation directory of your RMS and open the appsettings file. Now edit the connection string to your <em>RMS-ConfigStore</em> and the <em>ConfigStoreTableName</em>
+ <code>json
+ {
+   &quot;ConnectionStrings&quot;: {
+   &quot;ConfigStoreConnection&quot;: &quot;Server=[SERVER];Database=[CONFIG-DATABASE];Trusted_Connection=True;&quot;
+ },
+ &quot;ConfigStoreTableName&quot;: &quot;[CONFIG-TABLE-NAME]&quot;,</code></li>
+<li>Create the <em>RMS-ConfigStore</em> database. Use the [CONFIG-DATABASE] name stored in the appsettings connection string.</li>
+<li><p>The config store table itself <em>ConfigStoreTableName</em> has to be maintained with some settings to ensure correct functionality, e.g. the authentication token mentioned above.  After maintaining the values, the table should look like this.</p>
+<p> <img src="media/config-store.png" alt="Config store configuration"></p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>authToken</td>
+<td><em>The token with which Symbio authenticates itself to the Microservice (This value is Custom, here you can use whatever you like)</em></td>
+</tr>
+<tr>
+<td>SsrsSettings.SoapEndpointUrl</td>
+<td><em><code>https://HOST_NAME:HOST_PORT/REPORT_SERVER_NAME/reportService2010.asmx</code></em></td>
+</tr>
+<tr>
+<td>SsrsSettings.SourceFolder</td>
+<td><em>The name of the source folder in the SSRS. The default is _Template</em></td>
+</tr>
+<tr>
+<td>SsrsSettings.RootPath</td>
+<td><em>The root path for the reports. The default is /</em></td>
+</tr>
+<tr>
+<td>SsrsSettings.SoapDomain</td>
+<td><em>Credentials: domain of the user to use for the datasource connection (Binding entry if the connection string in Symbio uses Integrated Security)</em></td>
+</tr>
+<tr>
+<td>SsrsSettings.SoapUsername</td>
+<td><em>Credentials: username to use for the datasource connection (Binding entry if the connection string in Symbio uses Integrated Security)</em></td>
+</tr>
+<tr>
+<td>SsrsSettings.SoapPassword</td>
+<td><em>Credentials: password of the user to use for the datasource connection (Binding entry if the connection string in Symbio uses Integrated Security)</em></td>
+</tr>
+<tr>
+<td>StillAliveCron</td>
+<td><em>Optional parameter that ensures AlwaysOn. Recommended for OnPrem installations. Cron value indicates time until the next ping. (*/1 * * * * =&gt; Means a ping every minute.)</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="last-check">Last check</h3>
+<p>Open a browser and navigate to your Microservice URL.
+If your service is configured correctly, you will see a page with a simple login dialog.</p>
+<p>If an error is displayed on the website, check the configuration and look it up in <a href="troubleshooting.html#rms-troubleshooting">troubleshooting</a> of your RMS.</p>
+<hr>
+<h2 id="configuration-in-symbio">Configuration in Symbio</h2>
+<h3 id="external-systemreport-pool">External System/Report Pool</h3>
+<ol>
+<li>To configure the report pool and therefore the micro service navigate to the <em>sysadmin/_admin</em> level and choose the external systems.</li>
+<li><p>Select the type <em>Report Pool</em> and create a new one. Provide the corresponding settings.</p>
+<p> <img src="media/external-system.png" alt="External system configuration"></p>
+<ul>
+<li><strong><em>URL</em></strong>: The url is the concrete to url to the endpoint of the reporting microservice. On a local machine this could be e.g. <em><code>http://localhost:64689/</code></em></li>
+<li><strong><em>Authentication token</em></strong>: For basic authentication provide a token, which can be an arbitrary string. This token is used to authenticate symbio against the micro service.<ul>
+<li><em>NOTE</em>: This token has to be defined in the <em>ConfigStoreDatabase</em> as well.</li>
+</ul>
+</li>
+<li><strong><em>Connection string</em></strong>: This is the full connection string to the the database that should be used/setup for the reporting, e.g. (<em>Server=SERVER_NAME;Initial Catalog=ODS_DATABASE_NAME;Integrated Security=true;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Connection Timeout=30;</em>). Without Integrated Security, user and password must be entered.</li>
+<li><strong><em>Cron expression</em></strong>: You may provide a valid cron expression to state the interval, in which a full fetch should be performed to update the whole ods database.</li>
+<li><strong><em>Cron expression (CRUD)</em></strong>: You also may provide a valid cron expresson to state the interval, when the aggregated CRUD operations saved in the hangfire queue are send to the database.</li>
+<li><strong><em>SSRS enabled</em></strong>: Activate this setting if you want to use an SSRS.</li>
+<li><strong><em>Power BI enabled</em></strong>: Activate this setting if you want to use Power BI.</li>
+<li><strong><em>Converter file</em></strong>: The attached converter file is executed when the database is connected to the ReportPool.</li>
+<li><strong><em>Converter file (unlink)</em></strong>: The attached converter file is executed when the connection between the database and the ReportPool is removed.</li>
+</ul>
+</li>
+</ol>
+<h2 id="linking-a-storage">Linking a storage</h2>
+<p>If you have successfully setup all the components above, you are ready to use the reporting within a storage. To accomplish this, the following steps have to be done.</p>
+<ol>
+<li>Navigate to <em>COLLECTION/_admin</em> and choose the storages.</li>
+<li>Select the storage you wish to connect with a configured report pool.</li>
+<li><p>In the detail content you should see the available <em>ODSReportPools</em> in a drop down.</p>
+<p> <img src="media/link-storage-DCConfig.png" alt="External system configuration"></p>
+</li>
+<li><p>By choosing the pool from the selection value the <em>link</em> operation starts. This operation automatically performs the following steps:</p>
+<ul>
+<li>The micro service is called to to setup the ods database according the settings you made.</li>
+<li>Symbio will create a token to enable the micro service to run rest api requests against Symbio</li>
+<li>If linking is successful, Symbio will create web hooks to send events to the micro service, if there are changes to your storage, e.g. insertion of new elements.</li>
+<li>The micro service will try to retrieve and copy the available reports from the template to the working directory on SSRS site.</li>
+<li>The micro service will initially perform a full fetch against the Symbio storage to fill the ods database with the available data.</li>
+<li>After that the micro service will prepare the available reports to be sent to Symbio.</li>
+<li>When this is done, the status should be successfully changed and all found reports are available are available in Symbio&#39;s administration area in <em>Reports</em>.</li>
+</ul>
+</li>
+<li>You are now ready to use the reports e.g. in the report widgets and show them in the configurable element posters.</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/services/reporting-service/RMSconfiguration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

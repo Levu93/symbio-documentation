@@ -1,0 +1,165 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: attributes
+  name: Attributes
+  href: docs/developer/rest-api/reference/attributes.html
+- uid: attributesget
+  name: Attributes
+  href: docs/developer/rest-api/reference/attributes-get.html
+- uid: attributesinfoget
+  name: Element information
+  href: docs/developer/rest-api/reference/elementsinfo-get.html
+- uid: attributeslist
+  name: Attributes
+  href: docs/developer/rest-api/reference/attributes-list.html
+- uid: authtoken
+  name: rest-symbio-auth-token-client
+  href: docs/developer/rest-api/how-to/rest-symbio-auth-token-client-temp-example-documentation/rest-symbio-auth-token-client-temp-example-documentation.html
+- uid: checklist
+  name: Symbio SSO
+  href: docs/admin/installation-guide/saml-configuration/6_checklist.html
+- uid: children
+  name: Children
+  href: docs/developer/rest-api/reference/children.html
+- uid: connect-external-systems
+  name: Connect the external systems
+  href: docs/admin/administration/external-systems/connect-external-systems.html
+- uid: content
+  name: Content
+  href: docs/developer/rest-api/reference/content.html
+- uid: creating
+  name: Creatig the Stereotypes
+  href: docs/admin/administration/stereotypes/creating-stereotypes.html
+- uid: creating-external-systems
+  name: Creating external systems
+  href: docs/admin/administration/external-systems/creating-external-systems.html
+- uid: creating-factsheets
+  name: Creating fact sheets
+  href: docs/admin/administration/fact-sheets/creating-factsheets.html
+- uid: creating-token-and-inform-external-systems
+  name: creating-token-and-inform-external-systems
+  href: docs/admin/administration/external-systems/create-token-and-inform-external-systems.html
+- uid: disconnect-external-systems
+  name: Disconnect the external systems
+  href: docs/admin/administration/external-systems/disconnect-external-systems.html
+- uid: element
+  name: element
+  href: docs/developer/rest-api/reference/models/element.html
+- uid: elements
+  name: Elements
+  href: docs/developer/rest-api/reference/elements.html
+- uid: elementsget
+  name: Elements
+  href: docs/developer/rest-api/reference/elements-get.html
+- uid: elementslist
+  name: Elements
+  href: docs/developer/rest-api/reference/elements-list.html
+- uid: error
+  name: Symbio API Error Handling
+  href: docs/developer/rest-api/how-to/error.html
+- uid: example-aad
+  name: Symbio SSO
+  href: docs/admin/installation-guide/saml-configuration/5_example-aad.html
+- uid: example-adfs
+  name: Symbio SSO
+  href: docs/admin/installation-guide/saml-configuration/4_example-adfs.html
+- uid: facet
+  name: facet
+  href: docs/developer/rest-api/reference/models/facet.html
+- uid: facets
+  name: Facets
+  href: docs/developer/rest-api/reference/facets.html
+- uid: filter
+  name: Symbio API Filter
+  href: docs/developer/rest-api/how-to/filter.html
+- uid: info
+  name: Facets
+  href: docs/developer/rest-api/reference/info.html
+- uid: introduction
+  name: Symbio SSO
+  href: docs/admin/installation-guide/saml-configuration/1_introduction.html
+- uid: manual-how-to-use
+  name: How to use ID Provider
+  href: docs/admin/services/unique-id-provider/manual-how-to-use.html
+- uid: operationresulttype
+  name: operationresulttype
+  href: docs/developer/rest-api/reference/models/operationresulttype.html
+- uid: qsMainProcesses
+  name: Quickstart
+  href: docs/developer/rest-api/how-to/quickstart-mainprocesses/quickstart-mainprocesses.html
+- uid: referror
+  name: referror
+  href: docs/developer/rest-api/reference/models/error.html
+- uid: related
+  name: Related
+  href: docs/developer/rest-api/reference/related.html
+- uid: relatedget
+  name: List
+  href: docs/developer/rest-api/reference/related-get.html
+- uid: relatedlist
+  name: List
+  href: docs/developer/rest-api/reference/related-list.html
+- uid: release
+  name: Release
+  href: docs/developer/rest-api/reference/release.html
+- uid: releasechangestate
+  name: Change state
+  href: docs/developer/rest-api/reference/release-change-state.html
+- uid: releasecreateversion
+  name: Create version
+  href: docs/developer/rest-api/reference/release-create-version.html
+- uid: setting-up-saml
+  name: Symbio SSO
+  href: docs/admin/installation-guide/saml-configuration/2_setting-up-saml.html
+- uid: transition
+  name: transition
+  href: docs/developer/rest-api/reference/models/transition.html
+- uid: transitions
+  name: Change state
+  href: docs/developer/rest-api/reference/release-transitions.html
+- uid: type
+  name: type
+  href: docs/developer/rest-api/reference/models/type.html
+- uid: uniqueid-config-before-start
+  name: Configuration
+  href: docs/admin/services/unique-id-provider/config-before-start.html
+- uid: uniqueid-config-create-provider
+  name: Create ID Provider
+  href: docs/admin/services/unique-id-provider/config-create-provider.html
+- uid: uniqueid-config-provider-config
+  name: Create ID Provider Configuration
+  href: docs/admin/services/unique-id-provider/config-provider-config.html
+- uid: uniqueid-install-conditions
+  name: General conditions
+  href: docs/admin/services/unique-id-provider/install-conditions.html
+- uid: uniqueid-install-create-token
+  name: Create Connection Token
+  href: docs/admin/services/unique-id-provider/install-create-token.html
+- uid: uniqueid-install-gotchas
+  name: 'Gotchas:'
+  href: docs/admin/services/unique-id-provider/install-gotchas.html
+- uid: uniqueid-install-intro
+  name: Introduction
+  href: docs/admin/services/unique-id-provider/install-intro.html
+- uid: uniqueid-install-manual
+  name: Manual installation
+  href: docs/admin/services/unique-id-provider/install-manual.html
+- uid: uniqueid-install-scripted
+  name: Scripted Installation
+  href: docs/admin/services/unique-id-provider/install-scripted.html
+- uid: use-factsheets
+  name: Use fact sheets
+  href: docs/admin/administration/fact-sheets/use-factsheets.html
+- uid: user-rights-management
+  name: Symbio SSO
+  href: docs/admin/installation-guide/saml-configuration/3_user-rights-management.html
+- uid: using
+  name: Using the Stereotypes
+  href: docs/admin/administration/stereotypes/use-stereotypes.html
+- uid: view
+  name: view
+  href: docs/developer/rest-api/reference/models/view.html
+- uid: views
+  name: Views
+  href: docs/developer/rest-api/reference/views.html

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Manual installation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Manual installation ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="manual-installation">Manual installation</h1>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>You need the installation package for the RMS Microservice.</li>
+<li>Rights to install an IIS</li>
+</ul>
+<p>Install the IIS as described <a href="#../symbio/iis-installation">here</a>.</p>
+<p><em>If you already have an IIS in use and want to use it, you can skip the installation of the IIS.</em>
+<em>Then start with the point <a href="#../symbio/iis-installation.md#create-the-iis-website">Create the IIS Website</a></em></p>
+<p>Install the <a href="#install-the-net-core-windows-server-hosting-bundle">.NET Core Windows Server Hosting Package</a> .NET Core Windows Server Hosting Package after IIS Installation</p>
+<h2 id="deploy-the-rms">Deploy the RMS</h2>
+<p>After you have successfully installed the IIS, stop the IIS side and move the RMS Microservice files to the folder you configured for the IIS side (Physical path).</p>
+<p>To store the files correctly, unpack the installation package and open the folder of the unpacked package, which should look like this.</p>
+<p><img src="media/RMS_msDir.PNG" alt="RMS_msDir"></p>
+<p>Now move all files from the folder to the target directory of your RMS Microservices.
+If all files are stored in the target directory, continue with the <a href="RMSconfiguration.html#reporting-micro-service-and-config-store">configuration</a> of your RMS.</p>
+<p>After all files have been saved and the service has been configured, start the IIS page again.</p>
+<h2 id="install-the-net-core-windows-server-hosting-bundle">Install the .NET Core Windows Server Hosting bundle</h2>
+<ol>
+<li>Install the <a href="https://aka.ms/dotnetcore.2.0.0-windowshosting">.NET Core Windows Server Hosting bundle</a> on the hosting system. The bundle will install the .NET Core Runtime, .NET Core Library, and the <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/aspnet-core-module">ASP.NET Core Module</a>. The module creates the reverse-proxy between IIS and the Kestrel server. Note: If the system doesn&#39;t have an Internet connection, obtain and install the <a href="https://www.microsoft.com/download/details.aspx?id=53840">Microsoft Visual C++ 2015 Redistributable</a> before installing the .NET Core Windows Server Hosting bundle.</li>
+<li>Restart the system or execute <strong>net stop was /y</strong> followed by <strong>net start w3svc</strong> from a command prompt to pick up a change to the system PATH.</li>
+</ol>
+<p>Note: If you use an IIS Shared Configuration, see <a href="https://docs.microsoft.com/en-us/aspnet/core/hosting/aspnet-core-module#aspnet-core-module-with-an-iis-shared-configuration">ASP.NET Core Module with IIS Shared Configuration</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/services/reporting-service/rms-install-manual.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

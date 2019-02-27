@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Symbio SSO </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Symbio SSO ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="checklist">
+<h1 id="symbio-sso">Symbio SSO</h1>
+
+<h2 id="checklist">Checklist</h2>
+<p>The following checklist aids you in collecting all necessary data to get started with setting up SAML for Symbio.</p>
+<h3 id="is-your-infrastructure-ready-for-symbio-sso">Is your Infrastructure Ready for Symbio SSO?</h3>
+<p>If you can answer every question with Yes, your infrastructure is Ready for Symbio SSO.</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbio and IdP both reachable by browser?</td>
+<td>&#9744; Yes &#9744; No</td>
+</tr>
+<tr>
+<td>SAML 2.0-compliant IdP available?</td>
+<td>&#9744; Yes &#9744; No</td>
+</tr>
+<tr>
+<td>SSO HTTP-REDIRECT endpoint supported?</td>
+<td>&#9744; Yes &#9744; No</td>
+</tr>
+<tr>
+<td>POST to ACS endpoint supported?</td>
+<td>&#9744; Yes &#9744; No</td>
+</tr>
+<tr>
+<td>SHA-256 signatures supported?</td>
+<td>&#9744; Yes &#9744; No</td>
+</tr>
+<tr>
+<td>IdP Metadata XML file available?</td>
+<td>&#9744; Yes &#9744; No</td>
+</tr>
+<tr>
+<td>Metadata contains trustworthy certificate?</td>
+<td>&#9744; Yes &#9744; No</td>
+</tr>
+<tr>
+<td>(If on premise) Symbio installed on HTTPS binding?</td>
+<td>&#9744; Yes &#9744; No</td>
+</tr>
+</tbody>
+</table>
+<p>Please provide the IdP Metadata XML file to Ploetz + Zeller GmbH to get your Cloud instance of Symbio configured for SSO.</p>
+<h4 id="claims-details">Claims Details</h4>
+<table>
+<thead>
+<tr>
+<th>Additional Question</th>
+<th>Answer (needed by P+Z for Cloud setups)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claim Type users are identified by?</td>
+<td>(UPN preferred)</td>
+</tr>
+<tr>
+<td>Claim Type used for group membership?</td>
+<td>(Group preferred)</td>
+</tr>
+</tbody>
+</table>
+<p>If these answers diverge from the desired claim types, a custom claims mapping needs to be added.</p>
+<h3 id="what-is-needed-for-setting-up-your-idp">What is needed for Setting up your IdP?</h3>
+<p>The following data is most likely needed to setup your IdP:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initiated By</td>
+<td>Service Provider (IdP-initiated not supported)</td>
+</tr>
+<tr>
+<td>SP Entity ID</td>
+<td><a href="http://symbioworld.com/web">http://symbioworld.com/web</a></td>
+</tr>
+<tr>
+<td>SSO Service</td>
+<td>Expect HTTP-REDIRECT</td>
+</tr>
+<tr>
+<td>AuthnRequest</td>
+<td>Expect Unsigned</td>
+</tr>
+<tr>
+<td>ACS Type</td>
+<td>Set to HTTP-POST</td>
+</tr>
+<tr>
+<td>Response</td>
+<td>Set to Signed</td>
+</tr>
+<tr>
+<td>SP URL</td>
+<td>Symbio Root URL (Cloud: provided by P+Z)</td>
+</tr>
+<tr>
+<td>ACS URL</td>
+<td>Symbio Root URL + &quot;/AuthServices/Acs&quot;</td>
+</tr>
+<tr>
+<td>Minimal Claims</td>
+<td>(see below)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="minimal-claims-expected-by-symbio">Minimal Claims expected by Symbio</h4>
+<ul>
+<li>UPN (upn: <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn</a>)</li>
+<li>Last Name (surname: <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</a>)</li>
+<li>First Name (givenname: <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</a>)</li>
+<li>E-Mail (emailaddress: <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress">http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</a>)</li>
+<li>Group (group: <a href="http://schemas.xmlsoap.org/claims/Group">http://schemas.xmlsoap.org/claims/Group</a>)</li>
+</ul>
+<p>If your claims diverge from this list, please provide P+Z with a list of transmitted claims.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/installation-guide/saml-configuration/6_checklist.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

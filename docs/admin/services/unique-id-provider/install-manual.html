@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Manual installation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Manual installation ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-default ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pznavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://symbioworld.com">
+                <img class="logo" src="../../../../images/pz_logo.png" alt="Ploetz + Zeller GmbH">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="pznavbar">
+              <ul class="nav level1 navbar-nav">
+                <li>
+                  <a href="https://www.symbioworld.com/en/services/wissen-2/" name="" title="Knowledge">Knowledge</a>
+                </li>
+                <li>
+                  <a href="https://support.symbioworld.com/hc/de" name="" title="Support">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img class="logo" src="../../../../images/symbio_logo.png" alt="Symbio">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="uniqueid-install-manual">
+<h1 id="manual-installation">Manual installation</h1>
+
+<h2 id="internet-information-services-iis">Internet Information Services (IIS)</h2>
+<p>Enable the Web Server (IIS) role and establish role services.</p>
+<ul>
+<li>Windows Server </li>
+</ul>
+<h3 id="windows-desktop-operating-systems">Windows desktop operating systems</h3>
+<p>Navigate to <strong>Control Panel</strong> &gt; <strong>Programs</strong> &gt; <strong>Programs and Features</strong> &gt; <strong>Turn Windows features on or off</strong> (left side of the screen). Open the group for <strong>Internet Information Services</strong> and <strong>Web Management Tools</strong>. Check the box for <strong>IIS Management Console</strong>. Check the box for <strong>World Wide Web Services</strong>. Accept the default features for <strong>World Wide Web Services</strong> or customize the IIS features to suit your needs.</p>
+<p><img src="media/iis-windows-features.png" alt="Iis Windows Features"></p>
+<h3 id="windows-server-operating-systems">Windows Server operating systems</h3>
+<p>For server operating systems, use the <strong>Add Roles and Features</strong> wizard via the <strong>Manage</strong> menu or the link in <strong>Server Manager</strong>. On the <strong>Server Roles</strong> step, check the box for <strong>Web Server (IIS)</strong>.</p>
+<p><img src="media/select-server-roles.png" alt="Select Server Roles"></p>
+<p>On the <strong>Role services</strong> step, select the IIS role services you desire or accept the default role services provided.</p>
+<p><img src="media/select-role-services.png" alt="Select Role Services"></p>
+<p>Proceed through the <strong>Confirmation</strong> step to install the web server role and services. A server/IIS restart is not required after installing the Web Server (IIS) role.</p>
+<p>Install the <a href="#NetCore">.NET Core Windows Server Hosting Package</a> .NET Core Windows Server Hosting Package after IIS Installation</p>
+<h2 id="create-the-iis-website">Create the IIS Website</h2>
+<ol>
+<li>On the target IIS system, create a folder to contain the application&#39;s published folders and files, which are described in <a href="https://docs.microsoft.com/en-us/aspnet/core/hosting/directory-structure">Directory Structure</a>.</li>
+<li>Within the folder you created, create a logs folder to hold application logs (if you plan to enable logging). If you plan to deploy your application with a <em>logs</em> folder in the payload, you may skip this step.</li>
+<li>In <strong>IIS Manager</strong>, create a new website. Provide a <strong>Site name</strong> and set the <strong>Physical path</strong> to the application&#39;s deployment folder that you created. Provide the <strong>Binding</strong> configuration and create the website.</li>
+<li>Set the application pool to <strong>No Managed Code</strong>. ASP.NET Core runs in a separate process and manages the runtime.</li>
+<li><p>Configure the IIS Application Pool to load the user profile. This setting is in the Process Model section under the Advanced Settings for the application pool. Set Load User Profile to True. This will store keys under the user profile directory, and protected using DPAPI with a key specific to the user account used for the app pool.</p>
+</li>
+<li><p>Open the <strong>Add Website</strong> window.</p>
+<p><img src="media/add-website-window.png" alt="Add Website Window"></p>
+</li>
+<li><p>Configure the website.</p>
+<p><img src="media/configure-website.png" alt="Configure Website"></p>
+</li>
+<li><p>In the <strong>Application Pools</strong> panel, open the <strong>Edit Application Pool</strong> window by right-clicking on the website&#39;s application pool and selecting <strong>Basic Settings...</strong> from the popup menu.</p>
+<p><img src="media/app-pool-basic-settings.png" alt="App Pool Basic Settings"></p>
+</li>
+<li><p>Set the <strong>.NET CLR version</strong> to <strong>No Managed Code</strong>.</p>
+<p><img src="media/no-managed-code.png" alt="No Managed Code"></p>
+<p>Note: Setting the <strong>.NET CLR version</strong> to <strong>No Managed Code</strong> is optional. ASP.NET Core doesn&#39;t rely on loading the desktop CLR.</p>
+</li>
+<li><p>Confirm the process model identity has the proper permissions.</p>
+<p>If you change the default identity of the application pool (<strong>Process Model</strong> &gt; <strong>Identity</strong>) from <strong>ApplicationPoolIdentity</strong> to another identity, verify that the new identity has the required permissions to access the application&#39;s folder, database, and other required resources.</p>
+</li>
+</ol>
+<h2 id="deploy-the-unique-id-micro-service">Deploy the Unique ID micro service</h2>
+<p>Deploy the Unique ID micro service to the folder you created on the target IIS system. Web Deploy is the recommended mechanism for deployment. Alternatives to Web Deploy are listed below.</p>
+<p>Confirm that the published app for deployment isn&#39;t running. Files in the publish folder are locked when the app is running. Deployment can&#39;t occur because locked files can&#39;t be copied.</p>
+<h1 id="NetCore">Install the .NET Core Windows Server Hosting bundle</h1>
+<ol>
+<li>Install the <a href="https://aka.ms/dotnetcore.2.0.0-windowshosting">.NET Core Windows Server Hosting bundle</a> on the hosting system. The bundle will install the .NET Core Runtime, .NET Core Library, and the <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/aspnet-core-module">ASP.NET Core Module</a>. The module creates the reverse-proxy between IIS and the Kestrel server. Note: If the system doesn&#39;t have an Internet connection, obtain and install the <a href="https://www.microsoft.com/download/details.aspx?id=53840">Microsoft Visual C++ 2015 Redistributable</a> before installing the .NET Core Windows Server Hosting bundle.</li>
+<li>Restart the system or execute <strong>net stop was /y</strong> followed by <strong>net start w3svc</strong> from a command prompt to pick up a change to the system PATH.</li>
+</ol>
+<p>Note: If you use an IIS Shared Configuration, see <a href="https://docs.microsoft.com/en-us/aspnet/core/hosting/aspnet-core-module#aspnet-core-module-with-an-iis-shared-configuration">ASP.NET Core Module with IIS Shared Configuration</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ploetz-zeller/symbio-documentation/blob/master/docs/admin/services/unique-id-provider/install-manual.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2018 Ploetz + Zeller GmbH</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
