@@ -26,8 +26,8 @@ references:
   name: Connect the external systems
   href: docs/admin/administration/external-systems/connect-external-systems.html
 - uid: content
-  name: Configuration
-  href: docs/developer/rest-api/reference/config.html
+  name: Content
+  href: docs/developer/rest-api/reference/content.html
 - uid: creating
   name: Creatig the Stereotypes
   href: docs/admin/administration/stereotypes/creating-stereotypes.html
